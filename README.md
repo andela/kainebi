@@ -1,12 +1,11 @@
-
-# Project Name: Kainebi
+Kainebi
+===
 
 Kainebi means  *together-ness*  from the Igbo language spoken in mostly Eastern Nigeria. 
 
-
 ## Purpose:
 
-Kainebi seeks to align branding across Andela with a living styleguide.
+Kainebi seeks to align branding across Andela with a living and functional function design guide and front end library.
 
 ## Objectives:
 - Create an easily extensible and maintainable style library
@@ -15,7 +14,6 @@ Kainebi seeks to align branding across Andela with a living styleguide.
 - Encourage functional design
 
 Design Philosophy:
-
 - Simplicity
 - Reusability
 - Modularity
@@ -25,23 +23,25 @@ To achieve these, we've had to look at best practices from industry leading fron
 
 ## Project Folder Directory
 
-– /
-  -- dist/
-    -- css/
+```bash
+  – /
+    -- dist/
+      -- css/
         --
-    -- js/
+      -- js/
         --
-  -- src/
-    -- globals/
+    -- src/
+      -- globals/
         _grid.scss
         _reset.scss
         _variables.scss
         _mixins.scss
         _utilities.scss
-    -- components/ 
+      -- components/ 
         --
     main.scss
-  -- docs/
-  -- demo/
-  -- gulpfile.js
-  -- package.json
+    -- docs/
+    -- demo/
+    -- gulpfile.js
+    -- package.json
+```
