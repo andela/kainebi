@@ -4,10 +4,9 @@ The rules outlined in this document cascades downward.
 
 ## Class Naming Convention
 
-**S****ELECTORS**
+### SELECTORS
 
-**Namespacing**
-
+### Namespacing
 
 - `.o-` : Signify that a selector is an Object. Modifications should be made with care since these are reused in different contexts
 - `.c-` : Signify that a selector is a Component.
@@ -17,18 +16,23 @@ The rules outlined in this document cascades downward.
 - `._` : Signify a hack. Avoid using this as much as possible. 
 
 Bad
- `._o-layout  {} ` 
+
+```css
+  ._o-layout  {} 
+``` 
  
- Good
 
-    .o-media {}
-    .c-navigation {}
+Good
+
+ ```css
+  .o-media {}
+  .c-navigation {}
+```
     
+## CSS
 
+### Formatting
 
-
-## **CSS**
-## Formatting
 - Use 2 spaces for indentation
 - DO NOT use ID selectors
 - Use dashes for class names i.e Use `.this-is-my-class-name {}` 
@@ -42,87 +46,97 @@ Bad
 - In properties, put a space after, but not before, the `:` character
 
 Bad
-`ul, li, a {}` 
+
+```css
+  ul, li, a {}
+``` 
 
 Good 
 
-    ul,
-    li,
-    a {}
-    
+```css
+  ul,
+  li,
+  a {}
+```
 
+## BEM
 
-## **BEM **
-
-`.block {} ` - Styles the top-level ‘Block’ of a component. 
-`.block__element {}` - Styles an ‘Element’ of the larger Block.
-`.block__element--modifier {} ` - Styles a ‘Modifier’ of the Block.
-
+```css
+  .block {} /* Styles the top-level ‘Block’ of a component. */ 
+  .block__element {} /* Styles an ‘Element’ of the larger Block. */
+  .block__element--modifier {} /* Styles a ‘Modifier’ of the Block. */
+```
 
 Bad
 
+```html
+  <header class="block">
+    <h1 class="block__elem1">
+      <a class="block__elem1__elem2" href="/">clubmate.fi</a>
+    </h1>
+  </header>
+```
+ - Don’t go so deep `.block__elem1__elem2`, don’t try to mimic the DOM tree. Nested html-elements is a DOM-tree. The names of the classes you write is a BEM-tree. Feel the difference!
 
-    <header class="block">
-        <h1 class="block__elem1">
-            <a class="block__elem1__elem2" href="/">clubmate.fi</a>
-        </h1>
-    </header>
-
- -Don’t go so deep `.block__elem1__elem2`, don’t try to mimic the DOM tree. Nested html-elements is a DOM-tree. The names of the classes you write is a BEM-tree. Feel the difference!
- 
-
-    .media_logo-image{}
+```css
+  .media_logo-image{}
+```
 
 Good
 
-
-    <header class="block">
-        <h1 class="block__elem1">
-            <a class="block__elem2" href="/">clubmate.fi</a>
-        </h1>
-    </header>
+```html
+  <header class="block">
+    <h1 class="block__elem1">
+      <a class="block__elem2" href="/">clubmate.fi</a>
+    </h1>
+  </header>
+```
 
 A real life example would be :
 
-    <ul class="menu">
-      <li class="menu__item">
-        <a class="menu__link">
-          <span class="menu__text"></span>
-        </a>
-      </li>
-    </ul>
+```html
+  <ul class="menu">
+    <li class="menu__item">
+      <a class="menu__link">
+        <span class="menu__text"></span>
+      </a>
+    </li>
+  </ul>
+```
 
+## SCSS
 
-## **SCSS**
 - Avoid nesting more 3 levels deep
 
 Bad
 
-
-    .body{
-     .media{
+```html
+  .body{
+    .media{
       .container{
        .column{
        }
       }
-     }
     }
+  }
+```
 
 Good 
 
-
-    .media {
-      &__logo {
-        color: red;
-        height: .2rem;
-      
-        &--small {
-          font-size: 1rem
-        }
+```html    
+  .media {
+    &__logo {
+      color: red;
+      height: .2rem;
+      &--small {
+        font-size: 1rem;
       }
     }
-## **OOCSS
-**
+  }
+```
+
+## OOCSS
+
 According to Nicole Sullivan, OOCSS is based on two principles:
 
 1. Separate Structure and Skin
@@ -141,6 +155,7 @@ Good
 
 
 Thanks to 
+===
 
 - Harry at [CSSWizardry](http://csswizardry.com). 
   - [MindBEMding - getting your head ‘round BEM syntax](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/)
