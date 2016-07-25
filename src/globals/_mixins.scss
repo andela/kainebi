@@ -1,0 +1,15 @@
+/**
+* 
+* @desc Mixins 
+* @name Mixins 
+* @author
+* @tested
+* @requires box-sizing.scss
+*
+*/
+
+@mixin box-sizing($sizing) {
+  box-sizing: $sizing;
+}
+
+
