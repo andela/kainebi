@@ -4,12 +4,15 @@
 /* ============================================
    Globals
    ============================================ */
+@import "globals/_settings":
 @import "globals/_variables";
 @import "globals/_normalize";
 @import "globals/_reset";
-@import "globals/_mixins.scss";
-@import "globals/_box-sizing.scss";
-@import "globals/_utilities.scss";
+@import "globals/_mixins";
+@import "globals/_box-sizing";
+@import "globals/_utilities";
+@import "globals/_colors";
+
 
 /* ============================================
    Modules
