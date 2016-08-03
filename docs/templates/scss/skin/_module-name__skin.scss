@@ -1,0 +1,22 @@
+/*doc
+---
+parent: parent-module-name
+name: module-name__skin
+title: Module Name
+---
+
+[TODO]: Update file parent, name, and title
+
+Example of skin for buttons.
+
+Button                                            | Class             | Description
+------------------------------------------------- | ----------------- | -----------
+<button class="btn btn__default">Default</button>   | `btn btn__default`  | This is what buttons look like, this is the go to button style.
+<button class="btn btn__primary">Primary</button>   | `btn btn__primary`  | Use this button as the primary call to action
+<button class="btn btn__danger">Delete</button>     | `btn btn__danger`   | This button is for delete actions, these actions should also have a confirmation dialog
+<button class="btn btn__disabled">Disabled</button> | `btn btn__disabled` | I'm afraid I can't let you do that, yet.
+*/
+
+.module-name__skin {
+
+}

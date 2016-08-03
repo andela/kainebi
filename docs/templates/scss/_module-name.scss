@@ -1,0 +1,43 @@
+/*doc
+---
+title: Module Name
+name: module-name
+category: Category
+---
+
+[TODO]:
+- Edit all files in this folder to match the title, name, and category of your module
+- Categories are top-level navs. Select from these categories: Logo, Colors, Typography, Iconography, Components, Utility Styles, Templates
+
+Example documentation for a button here. 
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+```html_example
+<button class="btn btn__default">Click</button>
+<a class="btn btn__default" href="http://andela.com">Don't click</a>
+```
+If your button is actually a link to another page, please use the
+`<a>` element, while if your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
+##Button Sizes
+There are three 3 sizes for buttons: Large, medium (default)
+and small. Simply apply the size modifier class for the desired size.
+There is also an additional modifier that will make the button take the
+full width of the container. It may be used with the any of the button
+size and style modifiers.
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="btn btn__default btn--lrg">Large</button>              | `btn btn__default btn--lrg`
+<button class="btn btn__default">Default</button>                   | `btn btn__default`
+<button class="btn btn__default btn--sml">Small</button>              | `btn btn__default btn--sml`
+<button class="btn btn__default btn--full-width">Full width</button>   | `btn btn__default btn--full-width`
+*/
+
+/* Your code here */
+
+.module-name {
+
+}
+
+

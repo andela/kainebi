@@ -1,3 +1,4 @@
+var os               = require('os');
 var gulp             = require('gulp');
 var sass             = require('gulp-sass');
 var jshint           = require('gulp-jshint');
@@ -13,9 +14,10 @@ var stripCssComments = require('gulp-strip-css-comments');
 var del              = require('del');
 var runSequence      = require('run-sequence');
 var browserSync      = require('browser-sync').create();
+var hologram         = require('gulp-hologram');
+var open             = require('gulp-open');
 
-
-gulp.task('sass', function () {
+gulp.task('sass', ['styleguide'], function () {
   var processors = [
     cssnext,
     precss,
@@ -40,12 +42,15 @@ gulp.task('lint', function () {
 
 gulp.task('serve', function () {
   browserSync.init({
-    server: {
+    open: true,
+    server: { 
       baseDir: 'demo',
       routes: {
-        "/dist": "dist"
-      }
+        '/dist': 'dist',
+        '/styleguide': 'styleguide'
+      },
     },
+    logPrefix: 'Kainebi',
   });
 });
 
@@ -60,9 +65,8 @@ gulp.task('concat', function () {
 gulp.task('watch', ['serve', 'sass'], function () {
   gulp.watch('src/**/*.scss', ['sass']);
   gulp.watch('src/**/*.js', browserSync.reload);
-
   // Reload when markup for demo app changes
-  gulp.watch('./src/_site/*.html', browserSync.reload);
+  gulp.watch('demo/**/*.html', browserSync.reload);
 });
 
 gulp.task('fonts', function () {
@@ -81,8 +85,26 @@ gulp.task('build', function (callback) {
   );
 });
 
+gulp.task('styleguide', function () {
+  return gulp.src('hologram_config.yml')
+    .pipe(hologram({bundler: true, logging: true}));
+});
+
+gulp.task('styleguidePreview', function () {
+	var browser = os.platform() === 'linux' ? 'google-chrome' : (os.platform() === 'darwin' ? 'google chrome' : (os.platform() === 'win32' ? 'chrome' : 'firefox')); 
+	return gulp.src(__filename)
+		.pipe(open({uri: 'http://localhost:3000/styleguide'}));
+});
+
+/*
+gulp.task('browserReload', ['watch'],  function () {
+  browserSync.reload();
+  done();
+});
+*/
+
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'serve', 'watch'],
+  runSequence(['sass', 'serve', 'watch', 'styleguidePreview'],
     callback
   );
 });
