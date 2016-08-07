@@ -12,12 +12,13 @@
 @import "globals/_box-sizing";
 @import "globals/_utilities";
 @import "globals/_colors";
-
+@import "globals/_font-awesome";
 
 /* ============================================
    Modules
    ============================================ */
-   
+
 /* ============================================
    Components
    ============================================ */
+@import "components/buttons/_buttons";
