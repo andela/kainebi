@@ -1,5 +1,5 @@
 /**
-* 
+*
 * @desc Mixins              // description of what styles contained in this file
 * @name Mixins              // name of the file, module, component, etc
 * @author                   // name of the author of the file
@@ -10,6 +10,17 @@
 
 @mixin box-sizing($sizing) {
   box-sizing: $sizing;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 
