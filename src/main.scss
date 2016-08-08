@@ -1,24 +1,32 @@
-/* Stylesheet for Kainebi */
+/* Main stylesheet for Kainebi */
 
 
 /* ============================================
-   Globals
+   Base
+   - Normalize
+   - Variables
    ============================================ */
-@import "globals/_settings";
-@import "globals/_variables";
-@import "globals/_normalize";
-@import "globals/_reset";
-@import "globals/_mixins";
-@import "globals/_box-sizing";
-@import "globals/_utilities";
-@import "globals/_colors";
-
+@import "base/base";
 
 /* ============================================
-   Modules
+   Partials
+   - Logos
+   - Colors
+   - Mixins
+   - Typography
    ============================================ */
+<<<<<<< HEAD
+=======
+@import "partials/mixins";
+>>>>>>> 2433946e4972644b29c240c1588fed5e8d73b882
 
 /* ============================================
    Components
+   - Grid
    ============================================ */
+<<<<<<< HEAD
 @import "components/nav/_nav";
+=======
+@import "components/grid/grid";
+
+>>>>>>> 2433946e4972644b29c240c1588fed5e8d73b882
