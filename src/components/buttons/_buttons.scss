@@ -19,6 +19,18 @@ If your button is actually a link to another page, please use the
 `<a>` element, while if your button performs an action, such as submitting
 a form or triggering some javascript event, then use a `<button>` element.
 
+###Usage Example
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__solid--with-border-radius">submit</button>
+```
+
 ##Button Sizes
 There are three 3 sizes for buttons: Large, medium (default)
 and small. Simply apply the size modifier class for the desired size.
@@ -30,7 +42,7 @@ size and style modifiers.
 Button                                                            | Modifier Class
 ----------------------------------------------------------------- | -----------------
 <button class="button button__small">Small</button>              |   `button button__small`
-<button class="button">default</button>              |   `button`
+<button class="button">Default</button>              |   `button`
 <button class="button button__medium">Medium</button>                   |   `button button__medium`
 <button class="button button__large">Large</button>              | `button button__large`
 
