@@ -1,0 +1,166 @@
+
+
+
+/*doc
+---
+title: Buttons
+name: Buttons
+category: Components
+---
+
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+```html_example
+<button class="btn btn__default">Click</button>
+<a class="btn btn__default" href="http://andela.com">Don't click</a>
+```
+If your button is actually a link to another page, please use the
+`<a>` element, while if your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
+
+##Button Sizes
+There are three 3 sizes for buttons: Large, medium (default)
+and small. Simply apply the size modifier class for the desired size.
+There is also an additional modifier that will make the button take the
+full width of the container. It may be used with the any of the button
+size and style modifiers.
+
+###Buttons Sizes
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="button button__small">Small</button>              |   `button button__small`
+<button class="button">default</button>              |   `button`
+<button class="button button__medium">Medium</button>                   |   `button button__medium`
+<button class="button button__large">Large</button>              | `button button__large`
+
+
+
+##Button Types
+Buttons can be of different types: flat and Solid. Simply apply the modifier class for the desired type.
+
+###Flat Buttons
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="button button__flat button__flat--no-border-radius">Hairline</button>              |   `button button__flat button__flat--no-border-radius`
+<button class="button button__flat button__flat--with-border-radius">Default</button>                   |   `button button__flat button__flat--with-border-radius`
+<button class="button button__flat button__flat--with-shadow">Small</button>              | `button button__flat button__flat--with-shadow`
+<button class="button button__flat button__flat--with-shadow-and-radius">Full width</button>   | `button button__flat button__flat--with-shadow-and-radius`
+
+
+###Solid Buttons
+Button                                                            | Modifier Class
+----------------------------------------------------------------- | -----------------
+<button class="button button__solid button__solid--no-border-radius">Hairline</button>              |   `button button__solid button__solid--no-border-radius`
+<button class="button button__solid button__solid--with-border-radius">Default</button>                   |   `button button__solid button__solid--with-border-radius`
+<button class="button button__solid button__solid--with-shadow">Small</button>              | `button button__solid button__solid--with-shadow`
+<button class="button button__solid button__solid--with-shadow-and-radius">Full width</button>   | `button button__solid button__solid--with-shadow-and-radius`
+*/
+
+
+/* Your code here */
+
+$hover_color: #0940C9;
+
+.button {
+  width: 8em;
+  height: 2em;
+  outline: none;
+  color: white;
+  background-color: $primary;
+  cursor: pointer;
+  border: none;
+
+  &__small {
+    width: 6em;
+    height: 2em;
+    font-size: 1em;
+  }
+
+  &__medium {
+    width: 10em;
+    height: 3em;
+    font-size: 1em;
+  }
+
+  &__large {
+    width: 9em;
+    height: 3em;
+    font-size: 1.3em;
+  }
+
+  &:hover{
+    color: $primary;
+    background: white;
+    border: 1px solid $primary;
+  }
+
+  &__flat:hover{
+    color: white;
+    background-color: $primary;
+  }
+
+  &__flat{
+    color: $primary;
+    background: white;
+    border: 1px solid $primary;
+    &--no-border-radius {
+      border-radius: 0;
+    }
+    &--with-border-radius {
+      border-radius: 3px;
+    }
+    &--with-shadow{
+      box-shadow:0px 2px 5px #888888;
+      &:hover{
+        @extend .button__flat:hover;
+        box-shadow: 0px 1px 2px #888888;
+      }
+    }
+    &--with-shadow-and-radius{
+      box-shadow:0px 2px 5px #888888;
+      border-radius: 3px;
+      &:hover{
+        @extend .button__flat--with-shadow;
+      }
+    }
+  }
+  &__solid:hover{
+    color: $primary;
+    background: white;
+    cursor: pointer;
+  }
+  &__solid {
+    color: white;
+    background: $primary;
+    border: 1px solid $primary;
+    &--no-border-radius {
+      @extend .button__flat--no-border-radius
+
+    }
+    &--with-border-radius {
+      @extend .button__flat--with-border-radius
+    }
+    &--with-shadow{
+      @extend .button__flat--with-shadow
+    }
+    &--with-shadow-and-radius{
+        @extend .button__flat--with-shadow-and-radius
+      }
+  }
+    &__with-icon--flat {
+      @extend .button__flat
+    }
+
+    &__with-icon--solid {
+      @extend .button__solid
+    }
+
+    &__icon-button {
+      width: 3em;
+      height: 3em;
+      &--flat{
+        @extend .button__flat;
+      }
+    }
+}
