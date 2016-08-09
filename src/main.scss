@@ -7,7 +7,6 @@
    - Variables
    ============================================ */
 @import "base/base";
-
 /* ============================================
    Partials
    - Logos
@@ -16,6 +15,11 @@
    - Typography
    ============================================ */
 @import "partials/mixins";
+
+// Fonts
+@import "fonts/fonts";
+
+@import "partials/typography";
 
 /* ============================================
    Components
