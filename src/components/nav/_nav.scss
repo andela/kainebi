@@ -134,12 +134,12 @@ Here, we have our nav-items aligned to the left side of the nav.
   position: relative;
   min-height: 2rem;
   padding: .6rem 2rem;
-  @include clearfix();
+  //@include clearfix();
 
 
   &__header {
     float: left;
-    @include clearfix();
+    //@include clearfix();
   }
 
   &__brand {
