@@ -16,6 +16,7 @@ var runSequence      = require('run-sequence');
 var browserSync      = require('browser-sync').create();
 var hologram         = require('gulp-hologram');
 var open             = require('gulp-open');
+var flatten          = require('gulp-flatten');
 
 gulp.task('sass', ['styleguide'], function () {
   var processors = [
@@ -32,6 +33,12 @@ gulp.task('sass', ['styleguide'], function () {
     .pipe(browserSync.reload({
       stream: true
     }));
+});
+
+gulp.task('fonts', function () {
+  return gulp.src("src/fonts/*.{otf, woff, woff2}")
+    .pipe(flatten({ includeParents: 1 }))
+    .pipe(gulp.dest('dist/css/fonts'));
 });
 
 gulp.task('lint', function () {
@@ -62,17 +69,13 @@ gulp.task('concat', function () {
     .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('watch', ['serve', 'sass'], function () {
+gulp.task('watch', ['serve', 'sass', 'fonts'], function () {
   gulp.watch('src/**/*.scss', ['sass']);
   gulp.watch('src/**/*.js', browserSync.reload);
   // Reload when markup for demo app changes
   gulp.watch('demo/**/*.html', browserSync.reload);
 });
 
-gulp.task('fonts', function () {
-  return gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
-});
 
 gulp.task('clean:dist', function () {
   return del.sync('dist');
@@ -95,6 +98,7 @@ gulp.task('styleguidePreview', function () {
 	return gulp.src(__filename)
 		.pipe(open({uri: 'http://localhost:3000/styleguide'}));
 });
+
 
 /*
 gulp.task('browserReload', ['watch'],  function () {
