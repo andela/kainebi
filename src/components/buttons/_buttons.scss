@@ -39,34 +39,146 @@ full width of the container. It may be used with the any of the button
 size and style modifiers.
 
 ###Buttons Sizes
-Button                                                            | Modifier Class
------------------------------------------------------------------ | -----------------
-<button class="button button__small">Small</button>              |   `button button__small`
-<button class="button">Default</button>              |   `button`
-<button class="button button__medium">Medium</button>                   |   `button button__medium`
-<button class="button button__large">Large</button>              | `button button__large`
-
-
+####Small
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__small">small</button>
+```
+####Default
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button">default</button>
+```
+####Medium
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__medium">medium</button>
+```
+####Large
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__large">large</button>
+```
 
 ##Button Types
 Buttons can be of different types: flat and Solid. Simply apply the modifier class for the desired type.
 
 ###Flat Buttons
-Button                                                            | Modifier Class
------------------------------------------------------------------ | -----------------
-<button class="button button__flat button__flat--no-border-radius">Hairline</button>              |   `button button__flat button__flat--no-border-radius`
-<button class="button button__flat button__flat--with-border-radius">Default</button>                   |   `button button__flat button__flat--with-border-radius`
-<button class="button button__flat button__flat--with-shadow">Small</button>              | `button button__flat button__flat--with-shadow`
-<button class="button button__flat button__flat--with-shadow-and-radius">Full width</button>   | `button button__flat button__flat--with-shadow-and-radius`
+####flat button with no border radius
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__flat button__flat--no-border-radius">submit</button>
+```
+####flat button with border radius
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__flat button__flat--with-border-radius">submit</button>
+```
+####flat button with shadow
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__flat button__flat--with-shadow">submit</button>
+```
+####flat button with shadow and border radius
+<!-- demo-styles -->
+<style>
+  .button-block {
+    padding: 18px;
+    }
+</style>
+<!-- /demo-styles -->
+```html_example
+  <button class="button button__flat button__flat--with-shadow-and-radius">submit</button>
+```
 
 
 ###Solid Buttons
-Button                                                            | Modifier Class
------------------------------------------------------------------ | -----------------
-<button class="button button__solid button__solid--no-border-radius">Hairline</button>              |   `button button__solid button__solid--no-border-radius`
-<button class="button button__solid button__solid--with-border-radius">Default</button>                   |   `button button__solid button__solid--with-border-radius`
-<button class="button button__solid button__solid--with-shadow">Small</button>              | `button button__solid button__solid--with-shadow`
-<button class="button button__solid button__solid--with-shadow-and-radius">Full width</button>   | `button button__solid button__solid--with-shadow-and-radius`
+####solid button with no border radius
+<!-- demo-styles -->
+<style>
+.button-block {
+padding: 18px;
+}
+</style>
+<!-- /demo-styles -->
+```html_example
+<button class="button button__solid button__solid--no-border-radius">submit</button>
+```
+####solid button with border radius
+<!-- demo-styles -->
+<style>
+.button-block {
+padding: 18px;
+}
+</style>
+<!-- /demo-styles -->
+```html_example
+<button class="button button__solid button__solid--with-border-radius">submit</button>
+```
+####solid button with shadow
+<!-- demo-styles -->
+<style>
+.button-block {
+padding: 18px;
+}
+</style>
+<!-- /demo-styles -->
+```html_example
+<button class="button button__solid button__solid--with-shadow">submit</button>
+```
+####solid button with shadow and border radius
+<!-- demo-styles -->
+<style>
+.button-block {
+padding: 18px;
+}
+</style>
+<!-- /demo-styles -->
+```html_example
+<button class="button button__solid button__solid--with-shadow-and-radius">submit</button>
+```
 */
 
 
