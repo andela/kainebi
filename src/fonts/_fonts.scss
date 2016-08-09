@@ -1,0 +1,33 @@
+@import "../partials/mixins";
+
+// =============================
+// DINPro
+// =============================
+@include font-face(DINPro, DINPro, 400, normal, otf);
+
+// =============================
+// DINProExtlight
+// =============================
+@include font-face(DINPro, DINProExtlight, 100, null, otf);
+
+// =============================
+// DINProLight
+// =============================
+@include font-face(DINPro, DINProLight, 200, lighter, otf);
+
+// =============================
+// DINProItalic
+// =============================
+@include font-face(DINPro, DINProItalic, normal, italic, otf);
+
+// =============================
+// DINProMedium
+// =============================
+@include font-face(DINPro, DINProMedium, 500, null, otf);
+
+// =============================
+// DINProBold
+// =============================
+@include font-face(DINPro, DINProBold, 700, bold, otf);
+
+
