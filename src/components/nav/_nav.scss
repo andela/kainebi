@@ -13,12 +13,6 @@ This is the default navbar has a white background. This nav is static by default
 ```html_example
 <nav class="navbar navbar--default">
 
-  <div class="navbar__header">
-    <a href="" class="navbar__brand">
-      <div class="logo--blue"></div>
-    </a>
-  </div>
-
   <div class="navbar__nav">
     <ul class="navbar__nav--left">
       <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
@@ -44,12 +38,6 @@ With this variation the the background is transparent with the nav-links being w
 
 ```html_example
 <nav class="navbar navbar--blue">
-
-  <div class="navbar__header">
-    <a href="" class="navbar__brand">
-      <div class="logo--blue"></div>
-    </a>
-  </div>
 
   <div class="navbar__nav">
     <ul class="navbar__nav--left">
@@ -79,12 +67,6 @@ In this scenario, our nav-items will be on the right side of the nav
 
 ```html_example
 <nav class="navbar navbar--default">
-
-  <div class="navbar__header">
-    <a href="" class="navbar__brand">
-      <div class="logo--blue"></div>
-    </a>
-  </div>
 
   <div class="navbar__nav">
     <ul class="navbar__nav--right">
