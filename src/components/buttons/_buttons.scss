@@ -8,283 +8,228 @@ name: Buttons
 category: Components
 ---
 
-
-Button styles can be applied to any element. Typically you'll want to
-use either a `<button>` or an `<a>` element:
-```html_example
-<button class="btn btn__default">Click</button>
-<a class="btn btn__default" href="http://andela.com">Don't click</a>
-```
-If your button is actually a link to another page, please use the
-`<a>` element, while if your button performs an action, such as submitting
-a form or triggering some javascript event, then use a `<button>` element.
-
-###Usage Example
 <!-- demo-styles -->
 <style>
   .button-block {
     padding: 18px;
-    }
+  }
+  a {
+    text-decoration: none;
+  }
 </style>
 <!-- /demo-styles -->
+
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
 ```html_example
-  <button class="button button__solid--with-border-radius">submit</button>
+
+<button class="btn btn__basic">Click</button>
+
+<a class="btn btn__basic" href="http://andela.com">Don't click</a>
+
 ```
 
-##Button Sizes
-There are three 3 sizes for buttons: Large, medium (default)
-and small. Simply apply the size modifier class for the desired size.
+If your button is actually a link to another page, use the
+`<a>` element, while if your button performs an action, such as submitting
+a form or triggering some javascript event, then use a `<button>` element.
+
+### Usage Example
+
+```html_example
+  <button class="btn btn__basic btn--border"> Submit </button>
+```
+### Basic
+
+```html_example
+
+<button class="btn btn__basic"> Basic </button>
+
+```
+
+
+### Emphasis
+
+```html_example
+
+<h3> Solid </h3>
+
+<button class="btn btn__primary"> Primary </button>
+<button class="btn btn__secondary"> Secondary </button>
+
+```
+
+### Action Buttons
+
+```html_example
+
+<button class="btn btn__basic btn--positive"> Positive </button>
+<button class="btn btn__basic btn--negative"> Negative </button>
+
+<button class="btn btn__solid btn--positive"> Positive </button>
+<button class="btn btn__solid btn--negative"> Negative </button>
+
+```
+
+### Icon Buttons
+
+```html_example
+
+<button class="btn btn__icon btn--heart-icon"></button>
+<button class="btn btn__icon btn--like-icon"></button>
+
+```
+
+### Labeled Icon Buttons
+
+
+```html_example
+
+<button class="btn btn__labeled-icon btn--heart-icon"> I love this </button>
+<button class="btn btn__labeled-icon btn--like-icon"> I like this </button>
+
+````
+
+
+### Button Sizes
+
+There are four sizes for buttons: small, medium, large, x-large. Simply apply the size modifier class for the desired size.
 There is also an additional modifier that will make the button take the
 full width of the container. It may be used with the any of the button
 size and style modifiers.
 
-###Buttons Sizes
-####Small
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
 ```html_example
-  <button class="button button__small">small</button>
-```
-####Default
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button">default</button>
-```
-####Medium
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button button__medium">medium</button>
-```
-####Large
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button button__large">large</button>
-```
 
-##Button Types
-Buttons can be of different types: flat and Solid. Simply apply the modifier class for the desired type.
+<button class="btn btn__basic btn--small"> Small </button>
+<button class="btn btn__basic btn--medium"> Medium </button>
+<button class="btn btn__basic btn--large"> Large </button>
+<button class="btn btn__basic btn--x-large"> Extra Large</button>
 
-###Flat Buttons
-####flat button with no border radius
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button button__flat button__flat--no-border-radius">submit</button>
-```
-####flat button with border radius
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button button__flat button__flat--with-border-radius">submit</button>
-```
-####flat button with shadow
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button button__flat button__flat--with-shadow">submit</button>
-```
-####flat button with shadow and border radius
-<!-- demo-styles -->
-<style>
-  .button-block {
-    padding: 18px;
-    }
-</style>
-<!-- /demo-styles -->
-```html_example
-  <button class="button button__flat button__flat--with-shadow-and-radius">submit</button>
-```
+<h2> Full Width </h2>
+
+<div class="grid">
+  <div class="grid__item one-half">
+    <button class="btn btn__basic btn--full-width"> I'm full width</button>
+  </div>
+  <div class="grid__item one-half">
+    <button class="btn btn__basic"> I'm not full width :( </button>
+  </div>
+</div>
 
 
-###Solid Buttons
-####solid button with no border radius
-<!-- demo-styles -->
-<style>
-.button-block {
-padding: 18px;
-}
-</style>
-<!-- /demo-styles -->
-```html_example
-<button class="button button__solid button__solid--no-border-radius">submit</button>
 ```
-####solid button with border radius
-<!-- demo-styles -->
-<style>
-.button-block {
-padding: 18px;
-}
-</style>
-<!-- /demo-styles -->
-```html_example
-<button class="button button__solid button__solid--with-border-radius">submit</button>
-```
-####solid button with shadow
-<!-- demo-styles -->
-<style>
-.button-block {
-padding: 18px;
-}
-</style>
-<!-- /demo-styles -->
-```html_example
-<button class="button button__solid button__solid--with-shadow">submit</button>
-```
-####solid button with shadow and border radius
-<!-- demo-styles -->
-<style>
-.button-block {
-padding: 18px;
-}
-</style>
-<!-- /demo-styles -->
-```html_example
-<button class="button button__solid button__solid--with-shadow-and-radius">submit</button>
-```
+
 */
 
 
 /* Your code here */
 
 $hover_color: #0940C9;
+$primary-color: #3359df;
+$base-border-radius: 4px;
+$base-border: 1px solid #E3E4E6;
+$base-font-size: 16px;
+$secondary-color: #6376f9;
 
-.button {
-  width: 8em;
-  height: 2em;
-  outline: none;
-  color: white;
-  background-color: $primary;
-  cursor: pointer;
+
+@function color($color) {
+  @if(lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+button {
+  background: none;
   border: none;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
 
-  &__small {
-    width: 6em;
-    height: 2em;
-    font-size: 1em;
-  }
+%button {
+  cursor: pointer;
+  border-radius: $base-border-radius;
+  padding: .5em .9em;
+ }
 
-  &__medium {
-    width: 10em;
-    height: 3em;
-    font-size: 1em;
-  }
-
-  &__large {
-    width: 9em;
-    height: 3em;
-    font-size: 1.3em;
-  }
-
-  &:hover{
-    color: $primary;
-    background: white;
-    border: 1px solid $primary;
-  }
-
-  &__flat:hover{
-    color: white;
-    background-color: $primary;
-  }
-
-  &__flat{
-    color: $primary;
-    background: white;
-    border: 1px solid $primary;
-    &--no-border-radius {
-      border-radius: 0;
+@mixin btn($type, $color) {
+  @if($type == 'line') {
+    background-color: #fff;
+    color: $color;
+    border: 1px solid $color;
+    &:hover {
+      background-color: $color;
+      color: #fff;
     }
-    &--with-border-radius {
-      border-radius: 3px;
-    }
-    &--with-shadow{
-      box-shadow:0px 2px 5px #888888;
-      &:hover{
-        @extend .button__flat:hover;
-        box-shadow: 0px 1px 2px #888888;
-      }
-    }
-    &--with-shadow-and-radius{
-      box-shadow:0px 2px 5px #888888;
-      border-radius: 3px;
-      &:hover{
-        @extend .button__flat--with-shadow;
-      }
+  } @else {
+    background-color: $color;
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover {
+      background-color: #fff;
+      color: $color;
+      border: 1px solid $color;
     }
   }
-  &__solid:hover{
-    color: $primary;
-    background: white;
-    cursor: pointer;
+}
+
+
+.btn {
+  @extend %button;
+  
+  &__basic {
+    @include btn('line', #797979);
   }
+
+  &__primary {
+    @include btn('solid', $primary-color);
+  }
+
+  &__secondary {
+    @include btn('solid', $secondary-color);
+  }
+
+  &--positive {
+    @include btn('line', darken(#09dbaa, 8%));
+  }
+
+  &--negative {
+    @include btn('line', #f0405e);
+  }
+
   &__solid {
-    color: white;
-    background: $primary;
-    border: 1px solid $primary;
-    &--no-border-radius {
-      @extend .button__flat--no-border-radius
-
-    }
-    &--with-border-radius {
-      @extend .button__flat--with-border-radius
-    }
-    &--with-shadow{
-      @extend .button__flat--with-shadow
-    }
-    &--with-shadow-and-radius{
-        @extend .button__flat--with-shadow-and-radius
-      }
+    @include btn('solid', transparent);
   }
-    &__with-icon--flat {
-      @extend .button__flat
-    }
 
-    &__with-icon--solid {
-      @extend .button__solid
-    }
+  //TODO: 
 
-    &__icon-button {
-      width: 3em;
-      height: 3em;
-      &--flat{
-        @extend .button__flat;
-      }
-    }
+  &__icon {
+    
+  }
+
+  &__labeled-icon {
+
+  }
+
+  &--small {
+    font-size: 1em;
+  }
+
+  &--medium {
+    font-size: 1.2em;
+  }
+
+  &--large {
+    font-size: 1.5em;
+  }
+
+  &--x-large {
+    font-size: 2em;
+  }
+  
+  &--full-width {
+    min-width: 100%;
+  }
 }
