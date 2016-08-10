@@ -8,71 +8,69 @@ category: Components
 Will serve as the navigation header for your application or site. We can have different variations for the nav.
 ## Navbar variations
 ### Navbar default
-This is the default navbar has a blue background. This nav is static by default
+This is the default navbar has a white background. This nav is static by default
 
 ```html_example
 <nav class="navbar navbar--default">
 
-  <div class="navbar__nav navbar__nav--left">
-    <a href="#" class="navbar__item navbar__link">One</a>
-    <a href="#" class="navbar__item navbar__link">Two</a>
-    <a href="#" class="navbar__item navbar__link">Three</a>
-  </div>
-
-  <div class="navbar__nav navbar__nav--right">
-    <a href="#" class="navbar__item navbar__link">One</a>
-    <a href="#" class="navbar__item navbar__link">Two</a>
-    <a href="#" class="navbar__item navbar__link">Three</a>
-  </div>
-
-</nav>
-```
-
-### Navbar transparent
-With this variation the the background is transparent with the nav-links being blue in colour
-
-```html_example
-<nav class="navbar navbar--transparent">
-
   <div class="navbar__header">
-    <a href="" >
-      <img src="images/logo.png" alt="" class="logo--nav">
+    <a href="" class="navbar__brand">
+      <div class="logo--blue"></div>
     </a>
   </div>
 
-  <div class="navbar__nav navbar__nav--right">
-    <a href="#" class="navbar__item navbar__link">One</a>
-    <a href="#" class="navbar__item navbar__link">Two</a>
-    <a href="#" class="navbar__item navbar__link">Three</a>
-  </div>
+  <div class="navbar__nav">
+    <ul class="navbar__nav--left">
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
 
+    <ul class="navbar__nav--right">
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">One</a>
+      </li>
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">Dropdown &#9662</a>
+      </li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
+  </div>
 </nav>
 ```
 
-### Navbar fixed-top
-We have a sticky nav at the top with this variation
+### Navbar blue
+With this variation the the background is transparent with the nav-links being white in colour
 
 ```html_example
-<nav class="navbar navbar--default navbar--fixed--top">
+<nav class="navbar navbar--blue">
 
   <div class="navbar__header">
-    <a href="" >
-      <img src="images/logo.png" alt="" class="logo--nav">
+    <a href="" class="navbar__brand">
+      <div class="logo--blue"></div>
     </a>
   </div>
 
-  <div class="navbar__nav navbar__nav--right">
-    <a href="#" class="navbar__item navbar__link">One</a>
-    <a href="#" class="navbar__item navbar__link">Two</a>
-    <a href="#" class="navbar__item navbar__link">Three</a>
-  </div>
+  <div class="navbar__nav">
+    <ul class="navbar__nav--left">
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
 
+    <ul class="navbar__nav--right">
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">One</a>
+      </li>
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">Dropdown &#9662</a>
+      </li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
+  </div>
 </nav>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi unde sapiente soluta doloribus quam ea, ratione odit. Voluptatum enim ex exercitationem sunt sint! Ipsum et possimus ex nihil quibusdam praesentium.</p>
-<p>Sint aperiam nesciunt laboriosam eveniet amet, a aspernatur aliquid numquam cupiditate odit pariatur fuga, quibusdam, perferendis debitis provident consequatur omnis et sit. Tempora aut at, amet similique ducimus corporis cum.</p>
-<p>Incidunt doloremque qui modi ad, aperiam at, voluptates debitis facere molestias ullam rerum, quisquam magnam dicta sequi asperiores quidem alias officia vitae ipsa similique quae quam dolorum repellat impedit aliquid.</p>
-<p>Asperiores maxime consectetur mollitia quasi voluptatibus a hic dignissimos excepturi exercitationem dolore, nam ipsa iste suscipit eum molestias eius dolor omnis reprehenderit laborum, modi voluptate, magnam pariatur praesentium voluptatum! Animi.</p>
 ```
+
 ## Component Alignment
 We can have components aligned to the right side of the nav or left side of the nav
 
@@ -83,17 +81,22 @@ In this scenario, our nav-items will be on the right side of the nav
 <nav class="navbar navbar--default">
 
   <div class="navbar__header">
-    <a href="" >
-      <img src="images/logo.png" alt="" class="logo--nav">
+    <a href="" class="navbar__brand">
+      <div class="logo--blue"></div>
     </a>
   </div>
 
-  <div class="navbar__nav navbar__nav--right">
-    <a href="#" class="navbar__item navbar__link">One</a>
-    <a href="#" class="navbar__item navbar__link">Two</a>
-    <a href="#" class="navbar__item navbar__link">Three</a>
+  <div class="navbar__nav">
+    <ul class="navbar__nav--right">
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">One</a>
+      </li>
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">Dropdown &#9662</a>
+      </li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
   </div>
-
 </nav>
 ```
 
@@ -107,17 +110,18 @@ Here, we have our nav-items aligned to the left side of the nav.
 <nav class="navbar navbar--default">
 
   <div class="navbar__header">
-    <a href="" >
-      <img src="images/logo.png" alt="" class="logo--nav">
+    <a href="" class="navbar__brand">
+      <div class="logo--blue"></div>
     </a>
   </div>
 
-  <div class="navbar__nav navbar__nav--left">
-    <a href="#" class="navbar__item navbar__link">One</a>
-    <a href="#" class="navbar__item navbar__link">Two</a>
-    <a href="#" class="navbar__item navbar__link">Three</a>
+  <div class="navbar__nav">
+    <ul class="navbar__nav--left">
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
   </div>
-
 </nav>
 ```
 
@@ -126,30 +130,34 @@ Here, we have our nav-items aligned to the left side of the nav.
 
 /* Your code here */
 
+$blue: #3359df;
+$white: #ffffff;
+$black: #000000;
+$border: #dddddd;
 
 
 .navbar {
   $block: &;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
 
-  position: relative;
-  min-height: 2rem;
-  padding: .6rem 2rem;
-  @include clearfix();
 
 
   &__header {
-    float: left;
-    @include clearfix();
+    // float: left;
+    // align-items: left;
   }
+
+
 
   &__brand {
     float: left;
-    height: 50px;
-    padding: (.6rem / 2) 2rem;
-    font-size: 18px;
-    line-height: 20px;
-    color: white;
-    text-decoration: none;
+    padding: 0;
+    font-size: .9rem;
+    line-height: 1rem;
   }
 
 
@@ -170,74 +178,174 @@ Here, we have our nav-items aligned to the left side of the nav.
   }
 
   &--default {
-    background-color: blue;
+    background-color: $white;
+    border-bottom: 1px solid $border;
+
 
 
     #{$block}__nav {
-      margin: 0;
-
-      &--right {
-        float: right;
-      }
+      width: 85%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       &--left {
-        float: left;
+      display: flex;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
       }
+
+      &--right {
+      display: flex;
+      width: 90%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      }
+
     }
 
     #{$block}__item {
-      margin-left: .7rem;
-      height: 2.1rem;
+      padding: 0 1.1rem;
+      list-style: none;
+      line-height: 3.6rem;
+      cursor: pointer;
+
+      .navbar__dropdown {
+        min-width: 100%; /* Set width of the dropdown */
+        background: $blue;
+        display: none;
+        position: absolute;
+      }
+
+      &:hover {
+        background: $blue;
+        .navbar__link {
+          color: $white;
+        }
+        > ul {
+          display: block;
+          li {
+            display: block;
+            border-bottom: 1px solid $white;
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
     }
 
     #{$block}__link {
       text-decoration: none;
-      color: white;
+      color: $black;
+      font-weight: 500;
+      cursor: pointer;
 
       &:hover {
-        background-color: white;
-        color: blue;
+        color: $white;
       }
     }
+
   }
 
-  &--transparent {
-    background-color: transparent;
+  &--blue {
+    background-color: $blue;
+    border-bottom: 1px solid $border;
 
     #{$block}__nav {
-      margin: 0;
-
-      &--right {
-        float: right;
-      }
+      width: 85%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
       &--left {
-        float: left;
+      display: flex;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
       }
+
+      &--right {
+      display: flex;
+      width: 90%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      }
+
     }
 
     #{$block}__item {
-      margin-left: .7rem;
-      height: 2.1rem;
+      padding: 0 1.1rem;
+      list-style: none;
+      line-height: 3.6rem;
+      cursor: pointer;
+
+      .navbar__dropdown {
+        min-width: 100%; /* Set width of the dropdown */
+        background: $blue;
+        display: none;
+        position: absolute;
+      }
+
+      &:hover {
+        background: $white;
+        .navbar__link {
+          color: $blue;
+        }
+        > ul {
+          display: block;
+          li {
+            display: block;
+            border-bottom: 1px solid $blue;
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
 
     #{$block}__link {
       text-decoration: none;
-      color: blue;
+      color: $white;
+      font-weight: 500;
+      cursor: pointer;
 
       &:hover {
-        background-color: blue;
-        color: white;
+        color: $blue;
       }
     }
+
   }
 }
 
 
 
 .logo {
-  &--nav {
-    width: 6rem;
-    margin-top: -.1rem;
+  &--blue {
+    height: 100%;
+    padding: 1.1rem;
+    width: 7rem;
+    background: url('../images/logo-blue.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &--white {
+    height: 100%;
+    padding: 1.1rem;
+    width: 7rem;
+    background: url('../images/logo-white.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
+
+
