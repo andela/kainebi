@@ -7,7 +7,6 @@
    - Variables
    ============================================ */
 @import "base/base";
-
 /* ============================================
    Partials
    - Logos
@@ -17,9 +16,15 @@
    ============================================ */
 @import "partials/mixins";
 
+// Fonts
+@import "fonts/fonts";
+
+@import "partials/typography";
+
 /* ============================================
    Components
    - Grid
    ============================================ */
-@import "components/nav/_nav";
 @import "components/grid/grid";
+@import "components/nav/_nav";
+
