@@ -13,24 +13,38 @@ This is the default navbar has a white background. This nav is static by default
 ```html_example
 <nav class="navbar navbar--default">
 
-  <div class="navbar__nav">
-    <ul class="navbar__nav--left">
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-    </ul>
+    <div class="navbar__header">
+      <a href="" class="navbar__brand">
+        <div class="logo--blue"></div>
+      </a>
+    </div>
 
-    <ul class="navbar__nav--right">
-      <li class="navbar__item ">
-        <a href="#" class="navbar__link">One</a>
-      </li>
-      <li class="navbar__item ">
-        <a href="#" class="navbar__link">Dropdown &#9662</a>
-      </li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="navbar__nav">
+      <ul class="navbar__nav--left">
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      </ul>
+
+      <ul class="navbar__nav--right">
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">Dropdown &#9662</a>
+          <ul class="navbar__dropdown">
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Plugins</a></li>
+            <li><a href="#">Tutorials</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="cta">
+        <span class="vertical_line"></span>
+        <button class="btn btn__primary">PRIMARY</button>
+      </div>
+
+    </div>
+
+  </nav>
 ```
 
 ### Navbar blue
@@ -119,6 +133,36 @@ $border: #dddddd;
 
 body {
   margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  transition: all .3s ease-in-out;
+  font-size: 70%;
+}
+
+// .btn {
+//   cursor: pointer;
+//   border-radius: 4px;
+//   padding: .8rem 2.5rem;
+// }
+
+.cta {
+  margin: 0 1rem;
+  display: inherit;
+}
+
+// .btn__primary {
+//   background-color: $white;
+//   color: $blue;
+//   border: 1px solid $blue;
+// }
+
+.vertical_line {
+  border-right: 1px solid black;
+  margin-right: 1rem;
 }
 
 .navbar {

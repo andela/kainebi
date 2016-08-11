@@ -178,7 +178,7 @@ button {
 
 .btn {
   @extend %button;
-  
+
   &__basic {
     @include btn('line', #797979);
   }
@@ -203,10 +203,10 @@ button {
     @include btn('solid', transparent);
   }
 
-  //TODO: 
+  //TODO:
 
   &__icon {
-    
+
   }
 
   &__labeled-icon {
@@ -228,7 +228,7 @@ button {
   &--x-large {
     font-size: 2em;
   }
-  
+
   &--full-width {
     min-width: 100%;
   }
