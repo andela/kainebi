@@ -117,6 +117,9 @@ $white: #ffffff;
 $black: #000000;
 $border: #dddddd;
 
+body {
+  margin: 0;
+}
 
 .navbar {
   $block: &;
@@ -125,6 +128,15 @@ $border: #dddddd;
   align-items: center;
   justify-content: center;
   height: 3.5rem;
+
+
+
+  &__header {
+    // float: left;
+    // align-items: left;
+  }
+
+
 
   &__brand {
     float: left;
@@ -161,6 +173,7 @@ $border: #dddddd;
       display: flex;
       flex-direction: row;
       align-items: center;
+      position: relative;
 
       &--left {
       display: flex;
@@ -186,10 +199,32 @@ $border: #dddddd;
       cursor: pointer;
 
       .navbar__dropdown {
-        min-width: 100%; /* Set width of the dropdown */
         background: $blue;
         display: none;
         position: absolute;
+        top: 85%;
+        padding: 0;
+        margin-left: -1.1rem;
+        list-style: none;
+
+        li {
+          float: none;
+          border-bottom: 1px solid $white;
+          position: relative;
+          text-align: center;
+          line-height: 2.8rem;
+
+          a {
+            text-decoration: none;
+            color: $white;
+            padding: 0 2rem;
+            display: block;
+          }
+
+          &:hover {
+            background: blue;
+          }
+        }
       }
 
       &:hover {
@@ -199,14 +234,6 @@ $border: #dddddd;
         }
         > ul {
           display: block;
-          li {
-            display: block;
-            border-bottom: 1px solid $white;
-
-            a {
-              text-decoration: none;
-            }
-          }
         }
       }
 
@@ -320,5 +347,3 @@ $border: #dddddd;
     background-repeat: no-repeat;
   }
 }
-
-
