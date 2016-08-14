@@ -35,6 +35,7 @@ category: Iconography
       // border:1px solid #d8e0e5;
       -webkit-border-radius:3px;
       border-radius:3px;
+      padding: 0;
     }
    .icons li{
     display:inline-block;
@@ -69,7 +70,9 @@ category: Iconography
 
 <p class="small">This SVG sprite was created with <a href="http://fontastic.me/">Fontastic</a></p>
 
-Icons are hosted on Fontastic and can be used by adding this to the head of your HTML page <code><script src="https://file.myfontastic.com/zh6tc7MyGsqoTkFLB4UCk4/icons.js"></script></code>. They can  also be hosted locally as shown below.
+Icons are hosted on Fontastic and can be used by adding this to the head of your HTML page ```<script src="https://file.myfontastic.com/zh6tc7MyGsqoTkFLB4UCk4/icons.js"></script>```. 
+
+They can  also be hosted locally as shown below.
 
 ### How to use
 <p>1. Click and copy icon markup to your HTML page. For instance, the markup for a twitter icon could look like this: </p>
