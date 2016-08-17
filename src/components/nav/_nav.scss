@@ -23,18 +23,27 @@ This is the default navbar has a white background. This nav is static by default
       <ul class="navbar__nav--left">
         <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
         <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a>
+        <ul class="navbar__dropdown">
+            <li class="nav__dropdown__item"><a href="#">Themes</a></li>
+            <li class="nav__dropdown__item"><a href="#">Plugins</a></li>
+            <li class="nav__dropdown__item"><a href="#">Tutorials</a></li>
+          </ul></li>
       </ul>
 
       <ul class="navbar__nav--right">
         <li class="navbar__item ">
-          <a href="#" class="navbar__link">Dropdown &#9662</a>
+          <a href="#" class="navbar__link">One</a>
+        </li>
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">Dropdown ▾</a>
           <ul class="navbar__dropdown">
             <li><a href="#">Themes</a></li>
             <li><a href="#">Plugins</a></li>
             <li><a href="#">Tutorials</a></li>
           </ul>
         </li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
       </ul>
 
       <div class="cta">
@@ -47,32 +56,6 @@ This is the default navbar has a white background. This nav is static by default
   </nav>
 ```
 
-### Navbar blue
-With this variation the the background is transparent with the nav-links being white in colour
-
-```html_example
-<nav class="navbar navbar--blue">
-
-  <div class="navbar__nav">
-    <ul class="navbar__nav--left">
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-    </ul>
-
-    <ul class="navbar__nav--right">
-      <li class="navbar__item ">
-        <a href="#" class="navbar__link">One</a>
-      </li>
-      <li class="navbar__item ">
-        <a href="#" class="navbar__link">Dropdown &#9662</a>
-      </li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-    </ul>
-  </div>
-</nav>
-```
-
 ## Component Alignment
 We can have components aligned to the right side of the nav or left side of the nav
 
@@ -82,18 +65,32 @@ In this scenario, our nav-items will be on the right side of the nav
 ```html_example
 <nav class="navbar navbar--default">
 
-  <div class="navbar__nav">
-    <ul class="navbar__nav--right">
-      <li class="navbar__item ">
-        <a href="#" class="navbar__link">One</a>
-      </li>
-      <li class="navbar__item ">
-        <a href="#" class="navbar__link">Dropdown &#9662</a>
-      </li>
-      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-    </ul>
-  </div>
-</nav>
+    <div class="navbar__header">
+      <a href="" class="navbar__brand">
+        <div class="logo--blue"></div>
+      </a>
+    </div>
+
+    <div class="navbar__nav">
+
+      <ul class="navbar__nav--right">
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">One</a>
+        </li>
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">Dropdown ▾</a>
+          <ul class="navbar__dropdown">
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Plugins</a></li>
+            <li><a href="#">Tutorials</a></li>
+          </ul>
+        </li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      </ul>
+
+    </div>
+
+  </nav>
 ```
 
 
@@ -135,30 +132,10 @@ body {
   margin: 0;
 }
 
-button {
-  background: none;
-  border: none;
-  outline: none;
-  transition: all .3s ease-in-out;
-  font-size: 70%;
-}
-
-// .btn {
-//   cursor: pointer;
-//   border-radius: 4px;
-//   padding: .8rem 2.5rem;
-// }
-
 .cta {
   margin: 0 1rem;
   display: inherit;
 }
-
-// .btn__primary {
-//   background-color: $white;
-//   color: $blue;
-//   border: 1px solid $blue;
-// }
 
 .vertical_line {
   border-right: 1px solid black;
@@ -293,18 +270,20 @@ button {
         color: $white;
       }
     }
-
   }
 
   &--blue {
     background-color: $blue;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid $blue;
+
+
 
     #{$block}__nav {
       width: 85%;
       display: flex;
       flex-direction: row;
       align-items: center;
+      position: relative;
 
       &--left {
       display: flex;
@@ -328,12 +307,35 @@ button {
       list-style: none;
       line-height: 3.6rem;
       cursor: pointer;
+      border-bottom: 1px solid $blue;
 
       .navbar__dropdown {
-        min-width: 100%; /* Set width of the dropdown */
-        background: $blue;
+        background: $white;
         display: none;
         position: absolute;
+        top: 85%;
+        padding: 0;
+        margin-left: -1.1rem;
+        list-style: none;
+
+        li {
+          float: none;
+          border-bottom: 1px solid $blue;
+          position: relative;
+          text-align: center;
+          line-height: 2.8rem;
+
+          a {
+            text-decoration: none;
+            color: $black;
+            padding: 0 2rem;
+            display: block;
+          }
+
+          &:hover {
+            background: gray;
+          }
+        }
       }
 
       &:hover {
@@ -343,16 +345,9 @@ button {
         }
         > ul {
           display: block;
-          li {
-            display: block;
-            border-bottom: 1px solid $blue;
-
-            a {
-              text-decoration: none;
-            }
-          }
         }
       }
+
     }
 
     #{$block}__link {
@@ -365,7 +360,6 @@ button {
         color: $blue;
       }
     }
-
   }
 }
 
@@ -376,7 +370,7 @@ button {
     height: 100%;
     padding: 1.1rem;
     width: 7rem;
-    background: url('../images/logo-blue.png');
+    background: url('images/logo-blue.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -385,7 +379,7 @@ button {
     height: 100%;
     padding: 1.1rem;
     width: 7rem;
-    background: url('../images/logo-white.png');
+    background: url('images/logo-white.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
