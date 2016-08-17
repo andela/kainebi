@@ -1,0 +1,42 @@
+// @import 'sprites/sprite';
+
+// $ieSprite: '.lt-ie9' !default;
+// $sprite: map-get($icons, sprite) !default;
+// $baseFontSize: 16px !default;
+//
+// @import 'mixins';
+//
+// $essential-icon-set: Attachment,BarGraph,Book,Bookmark,Briefcase,BrowserWindow,Calendar,Camera,Cancel,Checkmark,Clock,Comment,CommentLines,Computer,Controls,Conversation,CreateNew,CreditCard,Crosshair,Diary,Document,DownArrow,Email,Folder,Forward,Heart,Home,Inbox,Tablet,Layers,LeftArrow,Link,List,Location,LocationMarker,Map,Medal,Menu,Microphone,Minus,MoreDetails,Music,NoVolume,Notification,Options,Padlock,Phone,Photo,PieChart,Pin,Plus,Printer,Profile,Rearrange,Refresh,Reply,RightArrow,Save,Search,Settings,Share,Shopping,Signal,Signals,Star,Tag,Toggle,Trash,TypingComment,UpArrow,User,Users,Video,VideoCamera,View,Volume,Warning;
+//
+// @each $icon in $essential-icon-set  {
+//   .icon-#{to-lower-case($icon)} {
+//     &:before {
+//       @include sprite($icon);
+//       content: '';
+//     }
+//   }
+// }
+
+
+//
+//   html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+//   body{line-height:1;color:#000;background:#fff}
+//   ol,ul{list-style:none}
+//   table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+//   caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+//   a img{border:none}
+//   *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+//   body{font-family:'Dosis','Tahoma',sans-serif}
+//   .container{margin:15px auto;width:80%}
+//   h1{margin:40px 0 20px;font-weight:700;font-size:38px;line-height:32px;color:#fb565e}
+//   h2{font-size:18px;padding:0 0 21px 5px;margin:45px 0 0 0;text-transform:uppercase;font-weight:500; color: #fb565e;}
+//   p {margin: 10px 0 ; line-height:1.3em; color: #454545;}
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    margin: 10px;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    fill: currentColor;
+  }

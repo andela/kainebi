@@ -15,9 +15,12 @@
    - Typography
    ============================================ */
 @import "partials/mixins";
-
+@import "partials/colors";
 // Fonts
 @import "fonts/fonts";
+
+// Icons
+@import "icons/icons";
 
 @import "partials/typography";
 

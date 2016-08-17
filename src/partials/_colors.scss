@@ -1,0 +1,489 @@
+/*doc
+---
+title: Colors
+name: color
+category: Colors
+---
+<style>
+  .swatch {
+    border-radius: 4px;
+    text-align: left;
+    margin: 5px;
+    padding: 5px;
+    height: 5em;
+  }
+  .swatch--fill {
+    color: #fff;  
+  }
+  .swatch--line {
+    color: #000;
+  }
+  [class*="border--"] {
+    border-width: 1px;
+    border-style: solid;
+  }
+</style>
+
+Color variable naming inspired by: [color.scss](https://github.com/mrmrs/colors)
+
+
+
+## Backgrounds
+
+```html_example
+<h2> Primary Palette </h2>
+<div class="grid grid--full"> 
+  <div class="grid__item one-half">
+    <div class="swatch bg-royal-blue swatch--fill">
+      .bg-royal-blue
+      <br>
+      #3359DF
+    </div>
+  </div>
+  <div class="grid__item one-half">
+    <div class="swatch bg-torea-bay swatch--fill">
+      .bg-torea-bay
+      <br>
+      #0B22AB
+    </div>
+  </div>
+ </div>
+ <div class="grid grid--full">
+  <div class="grid__item one-half ">
+    <div class="swatch bg-cornflower-blue swatch--fill">
+      .bg-cornflower-blue
+      <br>
+      #6376F9
+    </div>
+  </div>
+  <div class="grid__item one-half">
+    <div class="swatch bg-melrose">
+      .bg-melrose
+      <br>
+      #A1B0FF
+    </div>
+  </div>
+</div>
+```
+
+```html_example
+<h2> Secondary Palette </h2>
+
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <div class="swatch bg-atlantis">
+      .bg-atlantis
+      <br>
+      #77CF42
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch bg-amaranth swatch--fill">
+      .bg-amaranth
+      <br>
+      #F0405E
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class=" swatch bg-bright-torquiose">
+      .bg-bright-torquiose
+      <br>
+      #0FD8E8
+    </div>
+  </div>
+</div>
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <div class="swatch bg-purple-heart swatch--fill">
+      .bg-purple-heart
+      <br>
+      #A72DD4
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch bg-caribbean-green swatch--fill">
+      .bg-caribbean-green
+      <br>
+      #09DBAA
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch bg-tree-poppy swatch--fill">
+      .bg-tree-poppy
+      <br>
+      #F7941E
+    </div>
+  </div>
+</div>
+```
+
+## Colors
+
+```html_example
+
+<h2> Primary Palette </h2>
+
+<div class="grid grid--full"> 
+  <div class="grid__item one-quarter">
+    <div class="swatch royal-blue border--royal-blue">
+      .royal-blue
+      <br>
+      #3359DF
+    </div>
+  </div>
+  <div class="grid__item one-quarter">
+    <div class="swatch torea-bay border--torea-bay">
+      .torea-bay
+      <br>
+      #0B22AB
+    </div>
+  </div>
+  <div class="grid__item one-quarter">
+    <div class="swatch cornflower-blue border--cornflower-blue">
+      .cornflower-blue
+      <br>
+      #6376F9
+    </div>
+  </div>
+  <div class="grid__item one-quarter">
+    <div class="swatch melrose border--melrose">
+      .melrose
+      <br>
+      #A1B0FF
+    </div>
+  </div>
+</div>
+```
+
+```html_example
+
+<h2> Secondary Palette </h2>
+
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <div class="swatch atlantis border--atlantis">
+      .atlantis
+      <br>
+      #77CF42
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch amaranth border--amaranth">
+      .amaranth
+      <br>
+      #F0405E
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch bright-torquiose border--bright-torquiose">
+      .bright-torquiose
+      <br>
+      #0FD8E8
+    </div>
+  </div>
+</div>
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <div class="swatch purple-heart border--purple-heart">
+      .purple-heart
+      <br>
+      #A72DD4
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch caribbean-green border--caribbean-green">
+      .caribbean-green
+      <br>
+      #09DBAA
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch tree-poppy border--tree-poppy">
+      .tree-poppy
+      <br>
+      #F7941E
+    </div>
+  </div>
+</div>
+
+```
+
+```html_example
+<h2> SVG Fills </div>
+
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <span class="tree-poppy">
+      <svg class="icon-beverage-cokctail">
+        <use xlink:href="dist/css/icons/sprite.svg#icon-beverage-cokctail">
+        </use>
+      </svg>
+    </span>
+  </div>
+  <div class="grid__item one-third">
+    <span class="amaranth">
+      <svg class="icon-beverage-cokctail">
+        <use xlink:href="dist/css/icons/sprite.svg#icon-beverage-cokctail">
+        </use>
+      </svg>
+    </span>
+  </div>
+  <div class="grid__item one-third">
+    <span class="bright-torquiose">
+      <svg class="icon-beverage-cokctail">
+        <use xlink:href="dist/css/icons/sprite.svg#icon-beverage-cokctail">
+        </use>
+      </svg>
+    </span>
+  </div>
+</div>
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <span class="purple-heart">
+      <svg class="icon-beverage-cokctail">
+        <use xlink:href="dist/css/icons/sprite.svg#icon-beverage-cokctail">
+        </use>
+      </svg>
+    </span>
+  </div>
+  <div class="grid__item one-third">
+    <span class="purple-heart">
+      <svg class="icon-beverage-cokctail">
+        <use xlink:href="dist/css/icons/sprite.svg#icon-beverage-cokctail">
+        </use>
+      </svg>
+    </span>
+  </div>
+  <div class="grid__item one-third">
+    <span class="tree-poppy">
+      <svg class="icon-beverage-cokctail">
+        <use xlink:href="dist/css/icons/sprite.svg#icon-beverage-cokctail">
+        </use>
+      </svg>
+    </span
+  </div>
+</div>
+
+```
+
+## Border Colors
+
+```html_example
+
+<h2> Primary Palette </h2>
+
+<div class="grid grid--full"> 
+  <div class="grid__item one-quarter">
+    <div class="swatch border--royal-blue swatch--line">
+      .border--royal-blue
+      <br>
+      #3359DF
+    </div>
+  </div>
+  <div class="grid__item one-quarter">
+    <div class="swatch border--torea-bay">
+      .border--torea-bay
+      <br>
+      #0B22AB
+    </div>
+  </div>
+  <div class="grid__item one-quarter">
+    <div class="swatch border--cornflower-blue">
+      .border--cornflower-blue
+      <br>
+      #6376F9
+    </div>
+  </div>
+  <div class="grid__item one-quarter">
+    <div class="swatch border--melrose"
+      .border--melrose
+      <br>
+      #A1B0FF
+    </div>
+  </div>
+</div>
+```
+
+```html_example
+
+<h2> Secondary Palette </h2>
+
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <div class="swatch border--atlantis">
+      .border--atlantis
+      <br>
+      #77CF42
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch border--amaranth">
+      .border--amaranth
+      <br>
+      #F0405E
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch border--bright-torquiose">
+      .border--bright-torquiose
+      <br>
+      #0FD8E8
+    </div>
+  </div>
+</div>
+<div class="grid grid--full"> 
+  <div class="grid__item one-third">
+    <div class="swatch border--purple-heart">
+      .border--purple-heart
+      <br>
+      #A72DD4
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch border--carribean-green">
+      .border--carribean-green
+      <br>
+      #09DBAA
+    </div>
+  </div>
+  <div class="grid__item one-third">
+    <div class="swatch border--tree-poppy">
+      .border--tree-poppy
+      <br>
+      #F7941E
+    </div>
+  </div>
+</div>
+```
+
+
+*/
+
+
+/* @function find-value($list, $key) { */
+  // @each $item in $list {
+  //   @if ($key == nth($item, 1)) {
+  //     @return nth($item, 2);
+  //   }
+  // }
+  // @return false;
+/* } */
+
+@function color-level($color, $level: 0) {
+  $color: $color;
+  $color-base: if($level < 0, black, white);
+  @return mix($color-base, $color, $level * $color-interval);
+}
+
+$brand-colors: (
+  'royal-blue': ( 
+    'base': $royal-blue,
+    'light': color-level($royal-blue, 1),  
+    'dark': color-level($royal-blue, 0)
+  ),
+  'torea-bay': ( 
+    'base': $torea-bay,
+    'light': color-level($torea-bay, 1),  
+    'dark': color-level($torea-bay, 0)
+  ),
+   'cornflower-blue': (
+    'base': $cornflower-blue,
+    'light': color-level($cornflower-blue, 1),  
+    'dark': color-level($cornflower-blue, 0)
+  ),
+  'melrose': ( 
+    'base': $melrose,
+    'light': color-level($melrose, 1),
+    'dark': color-level($melrose, 0)
+  ),
+  'atlantis':  ( 
+    'base': $atlantis,
+    'light': color-level($atlantis, 1),
+    'dark': color-level($atlantis, 0)
+  ),
+  'amaranth': ( 
+    'base': $amaranth,
+    'light': color-level($amaranth, 1),
+    'dark': color-level($amaranth, 0)
+  ),  
+  'bright-torquiose': ( 
+    'base': $bright-torquiose,
+    'light': color-level($bright-torquiose, 1),
+    'dark': color-level($bright-torquiose, 0)
+  ), 
+  'purple-heart': ( 
+    'base': $purple-heart,
+    'light': color-level($purple-heart, 1),
+    'dark': color-level($purple-heart, 0)
+  ),
+  'caribbean-green': ( 
+    'base': $caribbean-green,
+    'light': color-level($caribbean-green, 0),
+    'dark': color-level($caribbean-green, 0)   
+  ),
+  'tree-poppy': ( 
+    'base': $tree-poppy,
+    'light': color-level($tree-poppy, 1),
+    'dark': color-level($tree-poppy, 0)   
+  )
+);
+
+/* Get brand color variant */
+@function brand-color($color-name, $color-variant: $brand-color-key) {
+  @return map-get(map-get($branch-color, $color-name), $color-variant);  
+}
+
+/* @function branch-color-alpha($color-name: 'primary', $opacity: 0) { */
+//   $color: $branch-color($color-name);
+// 
+//   @if map-key-exists($brand-color-opacity, $opacity) {
+//     $opacity: map-get($brand-color-opacity, $opacity);
+//   }
+// 
+//   @return rgba($color, $opacity);
+// }
+// 
+// @function brand-foreground-color($bgcolor, $threshold: 0.65) {
+//   @return if(lightness($bgcolor) >= $threshold, $color-dark, $color-light);
+/* } */
+
+
+// Output color styles
+
+@each $color-name, $color-variants in $brand-colors {
+  // Background styles
+  .bg-#{$color-name} {
+    background-color: map-get($color-variants, $brand-color-key);
+  }
+  // Color
+  .#{$color-name} {
+    color: map-get($color-variants, $brand-color-key);
+  }  
+  // Borders
+  .border--#{$color-name} {
+    border-color: map-get($color-variants, $brand-color-key);
+  }
+
+  // SVG fills 
+  /*
+  .fill-#{$color-name} {
+    fill: map-get($color-variants, $brand-color-key);
+  }
+
+  */
+
+  // SVG Stroke
+  /* 
+  .stroke-#{color-name} {
+    stroke: map-get($color-variants, $brand-color-key);
+  }
+  */
+
+}
+
+
+
+    
+
+
+
