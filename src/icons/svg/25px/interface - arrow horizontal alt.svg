@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="23" height="7" viewBox="0 0 23 7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3c4042;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path d="M23.000,3.498 L17.000,6.998 L17.000,3.999 L6.000,3.999 L6.000,6.998 L-0.000,3.498 L6.000,-0.003 L6.000,2.999 L17.000,2.999 L17.000,-0.003 L23.000,3.498 Z" class="cls-1"/>
+</svg>

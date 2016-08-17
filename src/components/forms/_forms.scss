@@ -1,0 +1,526 @@
+/*doc
+---
+title: Forms
+name: forms
+category: Components
+---
+
+Different types of forms and class selectors
+### Typical form
+```html_example
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <label for="firstname">First Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="lastname">Last Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="email">Work Email</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="company">Company Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="website">Website</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="country">Country</label><br>
+    <select class="one-whole">
+      <option value disabled>-Please select-</option>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="needs">Technical Needs</label><br>
+    <textarea class="one-whole"></textarea>
+  </div>
+  <br>
+
+  <div class="actions grid__item three-quarters">
+    <button class="btn btn__blue btn--full-width one-whole"> I'm full width</button>
+  </div>
+</form>
+```
+
+### Signup form
+```html_example
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <label for="username">Username&#42;</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="password">Password&#42;</label><br>
+    <input type="password" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="password">Password Confirm&#42;</label><br>
+    <input type="password" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <input type="checkbox">
+    <label>Remember me</label>
+  </div>
+  <br>
+
+  <div class="actions grid__item three-quarters">
+    <button class="btn btn__blue btn--full-width one-whole"> I'm full width</button>
+  </div>
+
+</form>
+```
+
+
+### Typical signup form with errors
+```html_example
+<form class="grid grid--center">
+
+  <div class="grid__item three-quarters">
+    <div class="notice-error">
+      <p>You have chosen to activate premium mode, it will cost $7.00 per month</p>
+    </div>
+  </div>
+
+
+  <div class="field grid__item three-quarters">
+    <label for="username" class="form-text-error">Username&#42;</label><br>
+    <input type="text" class="one-whole form-error">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="password" class="form-text-error">Password&#42;</label><br>
+    <input type="password" class="one-whole form-error">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="password" class="form-text-error">Password Confirm&#42;</label><br>
+    <input type="password" class="one-whole form-error">
+  </div>
+  <br>
+
+  <div class="cboxes grid__item three-quarters">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="checkbox" name="premium" id="premium" class="switch" />
+        <label for="premium">Activate Premium mode</label>
+      </div>
+      <div class="field grid__item one-quarter">
+        <input type="checkbox">
+        <label>Accept</label>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="actions grid__item three-quarters">
+    <button class="btn btn__blue btn--full-width one-whole"> I'm full width</button>
+  </div>
+
+</form>
+```
+
+### Typical Customer care form
+```html_example
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <label for="first_name">First Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="last_name">Last Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="email">Work Email</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="company">Company Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="website">Website</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="country">Country</label><br>
+    <select class="one-whole">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="actions grid__item three-quarters">
+
+    <div class="grid">
+      <div class="field grid__item one-half">
+        <button class="btn btn__blue btn--full-width"> I'm full width</button>
+      </div>
+
+      <div class="grid__item one-half">
+        <div class="support">
+          <div class="support__heading">
+            <p>For technical assistance call</p>
+          </div>
+          <div class="support__number">
+            <p>1234567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+```
+
+### Form fields
+```html_example
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <label for="username">Enter Username</label><br>
+    <input type="text" class="one-whole">
+  </div>
+</form>
+```
+
+
+### Multifields
+```html_example
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <label for="firstname">Name</label><br>
+    <div class="grid">
+      <div class="grid__item one-third">
+        <input type="text" class="one-whole" placeholder="First Name">
+      </div>
+      <div class="grid__item one-third">
+        <input type="text" class="one-whole" placeholder="Middle Name">
+      </div>
+      <div class="grid__item one-third">
+        <input type="text" class="one-whole" placeholder="Last Name">
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="grid__item one-third">
+        <label for="firstname">Username</label><br>
+        <input type="text" class="one-whole">
+      </div>
+      <div class="grid__item one-third">
+        <label for="middlename">Middlename</label><br>
+        <input type="text" class="one-whole">
+      </div>
+      <div class="grid__item one-third">
+        <label for="lastname">Lastname</label><br>
+        <input type="text" class="one-whole">
+      </div>
+    </div>
+  </div>
+</form>
+```
+
+### Checkboxes and radio buttons
+
+```html_example
+<form class="grid grid--center">
+
+  <div class="cboxes grid__item two-thirds">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="Radio" name="cpremium" id="cpremium">
+        <label for="cpremium">Radio</label>
+      </div>
+      <div class="field accept-field grid__item one-quarter">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="cboxes grid__item two-thirds">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="checkbox" name="checkpremium" id="checkpremium" class="switch">
+        <label for="checkpremium">Activate Premium mode</label>
+      </div>
+    </div>
+  </div>
+</form>
+```
+
+### Dropdowns and multiselect
+
+```html_example
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <div class="grid">
+      <div class="grid__item one-half">
+        <label for="firstname">Office</label><br>
+        <select class="three-quarters">
+          <option value="lagos">Lagos</option>
+          <option value="nairobi">Nairobi</option>
+          <option value="ny">New York</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class="grid__item one-half">
+        <label for="department">Department</label><br>
+        <select multiple class="three-quarters">
+          <option value="sales">Sales</option>
+          <option value="ops">Operations</option>
+          <option value="finance">finance</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>
+```
+
+### Disabled fields
+
+```html_example
+<div class="field grid__item three-quarters">
+  <label for="disabled">Disabled</label><br>
+  <input disabled type="text" class="one-whole" placeholder="This input has been disabled">
+</div>
+```
+
+*/
+
+/* Your code here */
+
+
+$blue: #3359df;
+$white: #ffffff;
+$black: #000000;
+$border: #dddddd;
+$form-bg: #F6F6F5;
+$text-color: #7f8385;
+
+
+
+/**
+ * Forms
+ */
+
+.btn__blue {
+  background-color: $blue;
+  color: $white;
+  border: 1px solid $blue;
+}
+
+.btn--full-width {
+    min-width: 67%;
+}
+
+.field {
+  color: #7f8385;
+}
+
+input[type="email"], input[type="text"], input[type="password"], textarea, select {
+    height: 2.1rem;
+    margin-top: .2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dde0ec;
+    color: #7f8385;
+    background-color: #f6f6f5;
+    border: 1px solid #fafafa;
+}
+
+select {
+  min-width: 50%;
+}
+
+
+textarea {
+    min-height: 8rem;
+    border: 1px solid #dde0ec;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: $blue;
+  outline: 0 none !important;
+  background: $white;
+}
+
+textarea:focus {
+  min-width: 100%;
+}
+
+// #form {
+//     padding: 0 0 5rem 0;
+// }
+//
+.form-error {
+  background: #FFECEC !important;
+}
+
+.form-text-error  {
+  color: #CB4343;
+}
+
+.support {
+  line-height: 1.4em;
+  text-align: right;
+}
+
+.support__heading {
+  color: $blue;
+
+  p {
+    margin: 0;
+  }
+}
+
+.support__number {
+  p {
+    margin: 0;
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Checkboxes
+ */
+input[type="checkbox"] {
+  margin-bottom: 1rem;
+}
+
+input.switch:empty
+{
+  margin-left: -999px;
+
+}
+
+input.switch:empty ~ label
+{
+  position: relative;
+  float: left;
+  line-height: 1.3em;
+  text-indent: 4em;
+  margin: 0.2em 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.switch:empty ~ label:before,
+input.switch:empty ~ label:after
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+  width: 3.6em;
+  background-color: #f6f6f5;
+  border-radius: 0.3em;
+  border: 1px solid #fafafa;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+input.switch:empty ~ label:after
+{
+  width: 1.4em;
+  top: 0.1em;
+  bottom: 0.1em;
+  margin-left: 0.1em;
+  background-color: #EDEDED;
+  border-radius: .3em;
+  border: 1px solid #CBCBCB;
+}
+
+input.switch:checked ~ label:before
+{
+  background-color: $blue;
+}
+
+input.switch:checked ~ label:after
+{
+  margin-left: 2.1em;
+}
+
+
+/**
+ * Alerts and notices
+ */
+
+.notice-error {
+  text-align: center;
+  padding: 1rem 0;
+  background: #FFFAE5;
+  border: 1px solid #978435;
+  margin-bottom: 2rem;
+}
+
+.accept-field {
+  text-align: right;
+}
+
+
+

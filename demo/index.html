@@ -10,13 +10,55 @@
 			.demo-block {
         background-color: #6376f9;
         padding: 18px;
-			}			
+			}
 		</style>
 	</head>
 
   <body>
-    
-    <h1>Grids</h1>
+  <nav class="navbar navbar--default">
+
+    <div class="navbar__header">
+      <a href="" class="navbar__brand">
+        <div class="logo--blue"></div>
+      </a>
+    </div>
+
+    <div class="navbar__nav">
+      <ul class="navbar__nav--left">
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a>
+        <ul class="navbar__dropdown">
+            <li class="nav__dropdown__item"><a href="#">Themes</a></li>
+            <li class="nav__dropdown__item"><a href="#">Plugins</a></li>
+            <li class="nav__dropdown__item"><a href="#">Tutorials</a></li>
+          </ul></li>
+      </ul>
+
+      <ul class="navbar__nav--right">
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">One</a>
+        </li>
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">Dropdown ▾</a>
+          <ul class="navbar__dropdown">
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Plugins</a></li>
+            <li><a href="#">Tutorials</a></li>
+          </ul>
+        </li>
+        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+      </ul>
+
+      <div class="cta">
+        <span class="vertical_line"></span>
+        <button class="btn btn__primary">PRIMARY</button>
+      </div>
+
+    </div>
+
+  </nav>
+  <h1>Grids</h1>
    <div class="grid">
 
 		<div class="grid__item  one-half  palm--one-whole">
@@ -182,7 +224,3 @@
 	</div>
 
 	</div>
-
-    </body>
-</html>
-
