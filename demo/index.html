@@ -10,12 +10,12 @@
 			.demo-block {
         background-color: #6376f9;
         padding: 18px;
-			}			
+			}
 		</style>
 	</head>
 
   <body>
-    
+
     <h1>Grids</h1>
    <div class="grid">
 
@@ -183,6 +183,535 @@
 
 	</div>
 
-    </body>
+	<div class="grid grid--center">
+		<div class="grid__item two-thirds">
+			<h2>Forms</h2>
+		</div>
+	</div>
+
+
+
+      <form class="grid grid--center">
+        <div class="field grid__item two-thirds">
+          <label for="firstname">First Name</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field grid__item two-thirds">
+          <label for="lastname">Last Name</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field grid__item two-thirds">
+          <label for="email">Work Email</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field grid__item two-thirds">
+          <label for="company">Company Name</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field grid__item two-thirds">
+          <label for="website">Website</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field grid__item two-thirds">
+          <label for="country">Country</label><br>
+          <select class="two-thirds">
+          	<option value disabled>-Please select-</option>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="field grid__item two-thirds">
+          <label for="needs">Technical Needs</label><br>
+          <textarea cols="30" rows="30" class="two-thirds"></textarea>
+        </div>
+        <br>
+
+        <div class="actions grid__item two-thirds">
+          <button class="btn btn__blue btn--full-width"> I'm full width</button>
+        </div>
+      </form>
+
+  <br>
+  <hr>
+
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Typical signup form</h4>
+      <form>
+        <div class="field">
+          <label for="username">Username</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="password">Password</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="confirm_password">Confirm password</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <input type="checkbox" name="remember" value="Bike">
+        	<label for="remember">Remember me</label>
+        </div>
+        <br>
+
+        <div class="actions">
+          <button class="btn btn__blue btn--full-width"> I'm full width</button>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+  <br>
+
+  <hr>
+
+
+
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Typical signup form with errors</h4>
+      <form>
+        <div class="notice-error two-thirds">
+          <p>You have chosen to activate premium mode, it will cost $7.00 per month</p>
+        </div>
+        <div class="field">
+          <label for="username" class="form-text-error">Username&#42;</label><br>
+          <input type="text" class="two-thirds form-error">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="password" class="form-text-error">Password&#42;</label><br>
+          <input type="text" class="two-thirds form-error">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="confirm_password" class="form-text-error">Confirm password&#42;</label><br>
+          <input type="text" class="two-thirds form-error">
+        </div>
+        <br>
+        <div class="grid two-thirds">
+          <div class="grid__item two-thirds">
+            <div class="field">
+              <input type="checkbox" id="slide" name="switch1" class="switch" />
+              <label for="slide">Activate Premium mode</label>
+            </div>
+          </div>
+          <div class="grid__item one-third">
+            <div class="field">
+              <input type="checkbox">
+              <label>Accept terms</label>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="actions">
+          <button class="btn btn__blue btn--full-width"> I'm full width</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <br>
+
+  <hr>
+
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <div class="grid">
+      <div class="grid__item one-half">
+        <label for="firstname">Office</label><br>
+        <select class="three-quarters">
+          <option value="volvo">Lagos</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div class="grid__item one-half">
+        <label for="middlename">Department</label><br>
+        <select class="three-quarters">
+          <option value="volvo">Sales</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</form>
+
+<br>
+<hr>
+
+<form class="grid grid--center">
+
+  <div class="cboxes grid__item two-thirds">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="Radio" name="cpremium" id="cpremium" class="switch">
+        <label for="cpremium">Radio</label>
+      </div>
+      <div class="field accept-field grid__item one-quarter">
+        <input type="checkbox">
+        <label>Checkbox</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="cboxes grid__item three-quarters">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="checkbox" name="cpremium" id="cpremium" class="switch">
+        <label for="cpremium">Activate Premium mode</label>
+      </div>
+    </div>
+  </div>
+</form>
+
+<hr>
+
+<form class="grid grid--center">
+  <div class="field grid__item three-quarters">
+    <label for="first_name">First Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="last_name">Last Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="email">Work Email</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="company">Company Name</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="website">Website</label><br>
+    <input type="text" class="one-whole">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="country">Country</label><br>
+    <select class="one-whole">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="cboxes grid__item three-quarters">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="checkbox" name="premium" id="premium" class="switch" />
+        <label for="premium">Activate Premium mode</label>
+      </div>
+      <div class="field accept-field grid__item one-quarter">
+        <input type="checkbox">
+        <label>Accept terms and conditions</label>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="actions grid__item three-quarters">
+
+    <div class="grid">
+      <div class="field grid__item one-half">
+        <button class="btn btn__blue btn--full-width"> I'm full width</button>
+      </div>
+
+      <div class="grid__item one-half">
+        <div class="support">
+          <div class="support__heading">
+            <p>For technical assistance call</p>
+          </div>
+          <div class="support__number">
+            <p>1234567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<hr>
+
+
+
+
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Customer care form</h4>
+      <form>
+        <div class="field">
+          <label for="firstname">First Name</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="lastname">Last Name</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="email">Work Email</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="company">Company Name</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="website">Website</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+
+        <div class="field">
+          <label for="country">Country</label><br>
+          <select class="two-thirds">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="actions">
+        	<div class="grid">
+        		<div class="grid__item one-third">
+        			<button class="btn btn__blue btn--full-width"> I'm full width</button>
+        		</div>
+        		<div class="grid__item two-thirds">
+        			<div class="support">
+        				<div class="support__heading">
+        					<p>For technical assistance call</p>
+        				</div>
+        				<div class="support__number">
+        					<p>1234567890</p>
+        				</div>
+
+        			</div>
+        		</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>
+
+  <hr>
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Form Fields</h4>
+      <form>
+        <div class="field">
+          <label for="username" class="form-text">Username</label><br>
+          <input type="text" class="two-thirds">
+        </div>
+        <br>
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Multi-fields</h4>
+      <form>
+        <div class="field">
+          <label for="username" class="form-text">Name</label><br>
+          <div class="grid two-thirds">
+          	<div class="grid__item one-third">
+          		<input type="text" placeholder="First">
+          	</div>
+          	<div class="grid__item one-third">
+          		<input type="text" placeholder="Middle">
+          	</div>
+          	<div class="grid__item one-third">
+          		<input type="text" placeholder="Last">
+          	</div>
+          </div>
+
+        </div>
+        <br>
+        <div class="field">
+          <div class="grid two-thirds">
+          	<div class="grid__item one-third">
+          		<label for="username" class="form-text">First name</label><br>
+          		<input type="text">
+          	</div>
+          	<div class="grid__item one-third">
+          		<label for="username" class="form-text">Middle name</label><br>
+          		<input type="text">
+          	</div>
+          	<div class="grid__item one-third">
+          		<label for="username" class="form-text">Last name</label><br>
+          		<input type="text">
+          	</div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Checkboxes and toggles</h4>
+      <form>
+        <div class="grid two-thirds">
+        	<div class="grid__item one-half">
+        		<div class="field">
+        			<input type="radio" name="radio" value="Bike">
+        			<label for="radio">Radio</label>
+        		</div>
+        	</div>
+        	<div class="grid__item one-half">
+        		<div class="field">
+        			<input type="checkbox" name="remember" value="Bike">
+        			<label for="remember">Remember me</label>
+        		</div>
+        	</div>
+        </div>
+        <br>
+
+        <div class="grid two-thirds">
+        	<div class="grid__item one-half">
+        		<div class="field">
+        			<input type="checkbox" id="slide" name="switch1" class="switch" />
+							<label for="slide">toggle switch</label>
+        		</div>
+        	</div>
+        	<div class="grid__item one-half">
+	        	<div class="field">
+        			<input type="checkbox">
+  						<label>Accept terms and conditions</label>
+        		</div>
+        	</div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+
+
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Dropdowns and multiselect</h4>
+      <form class="grid">
+      	<div class="grid__item one-half">
+      		<div class="field">
+      			<label for="country">Sex</label><br>
+	          <select>
+	            <option value="volvo">Male</option>
+	            <option value="saab">Female</option>
+	          </select>
+	        </div>
+      	</div>
+
+      	<div class="grid__item one-half">
+      		<div class="field">
+      			<label for="country">Country</label><br>
+	          <select>
+	            <option value="volvo">Kenyan</option>
+	            <option value="saab">Uganda</option>
+	            <option value="saab">Nigeria</option>
+	            <option value="saab">USA</option>
+	          </select>
+	        </div>
+      	</div>
+
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Disabled fields</h4>
+      <form class="grid">
+        <div class="grid__item">
+          <div class="field">
+            <label for="name">Name</label><br>
+            <input type="text" class="two-thirds" disabled placeholder="This field is disabled">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+  <div class="grid grid--center">
+    <div class="grid__item two-thirds">
+      <h4>Loading forms</h4>
+      <form class="grid">
+        <div class="grid__item">
+          <div class="field">
+            <label for="name">Name</label><br>
+            <input type="text" class="two-thirds" disabled placeholder="This field is disabled">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+
+
+ </body>
 </html>
 
