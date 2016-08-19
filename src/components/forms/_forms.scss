@@ -58,7 +58,7 @@ Different types of forms and class selectors
   <br>
 
   <div class="actions grid__item three-quarters">
-    <button class="btn btn__blue btn--full-width one-whole"> I'm full width</button>
+    <button class="btn btn__primary one-whole"> I'm full width</button>
   </div>
 </form>
 ```
@@ -91,7 +91,7 @@ Different types of forms and class selectors
   <br>
 
   <div class="actions grid__item three-quarters">
-    <button class="btn btn__blue btn--full-width one-whole"> I'm full width</button>
+    <button class="btn btn__primary one-whole"> I'm full width</button>
   </div>
 
 </form>
@@ -142,7 +142,7 @@ Different types of forms and class selectors
   <br>
 
   <div class="actions grid__item three-quarters">
-    <button class="btn btn__blue btn--full-width one-whole"> I'm full width</button>
+    <button class="btn btn__primary one-whole"> I'm full width</button>
   </div>
 
 </form>
@@ -196,7 +196,7 @@ Different types of forms and class selectors
 
     <div class="grid">
       <div class="field grid__item one-half">
-        <button class="btn btn__blue btn--full-width"> I'm full width</button>
+        <button class="btn btn__primary"> I'm full width</button>
       </div>
 
       <div class="grid__item one-half">
@@ -289,6 +289,16 @@ Different types of forms and class selectors
 </form>
 ```
 
+### Search form
+```html_example
+<form>
+  <div class="search-area">
+    <input type="text" placeholder="search..." class="seven-eiths search">
+    <button class="btn btn__primary btn__search"><span><svg class="icon-interface-search icon-search"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-search"></use></svg></span></button>
+  </div>
+</form>
+```
+
 ### Dropdowns and multiselect
 
 ```html_example
@@ -302,14 +312,6 @@ Different types of forms and class selectors
           <option value="nairobi">Nairobi</option>
           <option value="ny">New York</option>
           <option value="audi">Audi</option>
-        </select>
-      </div>
-      <div class="grid__item one-half">
-        <label for="department">Department</label><br>
-        <select multiple class="three-quarters">
-          <option value="sales">Sales</option>
-          <option value="ops">Operations</option>
-          <option value="finance">finance</option>
         </select>
       </div>
     </div>
@@ -343,39 +345,51 @@ $text-color: #7f8385;
 /**
  * Forms
  */
-
-.btn__blue {
-  background-color: $blue;
-  color: $white;
-  border: 1px solid $blue;
+.btn__search {
+  padding: .2rem .7rem;
 }
 
-.btn--full-width {
-    min-width: 67%;
+.icon-search {
+  margin: 0;
+  height: 15px;
 }
+
+.search-area {
+  width: 17rem;
+  margin-left: .5rem;
+
+  .search {
+    margin-bottom: 0;
+  }
+}
+
 
 .field {
   color: #7f8385;
 }
 
-input[type="email"], input[type="text"], input[type="password"], textarea, select {
-    height: 2.1rem;
-    margin-top: .2rem;
-    margin-bottom: 1rem;
-    border: 1px solid #dde0ec;
-    color: #7f8385;
-    background-color: #f6f6f5;
-    border: 1px solid #fafafa;
-}
-
+input[type="email"],
+input[type="text"],
+input[type="password"],
+textarea,
 select {
-  min-width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 2.1rem;
+  margin-top: .2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dde0ec;
+  color: #7f8385;
+  background-color: #f6f6f5;
+  border: 1px solid #fafafa;
+  border-radius: $base-border-radius;
+  padding: 0 16px;
 }
-
 
 textarea {
-    min-height: 8rem;
-    border: 1px solid #dde0ec;
+  min-height: 8rem;
+  border: 1px solid #dde0ec;
 }
 
 textarea:focus,
@@ -393,20 +407,15 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus {
+.uneditable-input:focus,
+select:focus {
   border-color: $blue;
   outline: 0 none !important;
   background: $white;
 }
 
-textarea:focus {
-  min-width: 100%;
-}
 
-// #form {
-//     padding: 0 0 5rem 0;
-// }
-//
+
 .form-error {
   background: #FFECEC !important;
 }
@@ -429,22 +438,18 @@ textarea:focus {
 }
 
 .support__number {
+
   p {
     margin: 0;
   }
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
 /**
  * Checkboxes
  */
-input[type="checkbox"] {
+input[type="checkbox"], input[type="radio"] {
   margin-bottom: 1rem;
+  margin-right: .3rem;
 }
 
 input.switch:empty
@@ -516,6 +521,7 @@ input.switch:checked ~ label:after
   background: #FFFAE5;
   border: 1px solid #978435;
   margin-bottom: 2rem;
+  border-radius: $base-border-radius;
 }
 
 .accept-field {

@@ -12,7 +12,7 @@ $default-context: 16;
 // Some magic number
 $magic-number: 24;
 $base-font-size: $default-context; // default 16px
-$base-line-height: ($magic-number/$base-font-size)+em; 
+$base-line-height: ($magic-number/$base-font-size)+em;
 $base-spacing: $base-line-height;
 $base-text-color: #000;
 $base-font-family: DINPro;
@@ -33,4 +33,5 @@ $caribbean-green: #09DBAA;
 $tree-poppy: #F7941E;
 $color-interval: 10% !global;
 $brand-color-key: 'base' !global;
+$base-border-radius: 4px !global;
 

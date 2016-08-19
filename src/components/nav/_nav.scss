@@ -13,45 +13,44 @@ This is the default navbar has a white background. This nav is static by default
 ```html_example
 <nav class="navbar navbar--default">
 
-    <div class="navbar__header">
-      <a href="" class="navbar__brand">
-        <div class="logo--blue"></div>
-      </a>
-    </div>
+  <div class="navbar__header">
+    <a href="" class="navbar__brand">
+      <div class="logo--blue"></div>
+    </a>
+  </div>
 
-    <div class="navbar__nav">
-      <ul class="navbar__nav--left">
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a>
+  <div class="navbar__nav">
+    <ul class="navbar__nav--left">
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a>
+      <ul class="navbar__dropdown">
+          <li class="nav__dropdown__item"><a href="#">Themes</a></li>
+          <li class="nav__dropdown__item"><a href="#">Plugins</a></li>
+          <li class="nav__dropdown__item"><a href="#">Tutorials</a></li>
+        </ul></li>
+    </ul>
+
+    <ul class="navbar__nav--right">
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">One</a>
+      </li>
+      <li class="navbar__item ">
+        <a href="#" class="navbar__link">Dropdown ▾</a>
         <ul class="navbar__dropdown">
-            <li class="nav__dropdown__item"><a href="#">Themes</a></li>
-            <li class="nav__dropdown__item"><a href="#">Plugins</a></li>
-            <li class="nav__dropdown__item"><a href="#">Tutorials</a></li>
-          </ul></li>
-      </ul>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Plugins</a></li>
+          <li><a href="#">Tutorials</a></li>
+        </ul>
+      </li>
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
 
-      <ul class="navbar__nav--right">
-        <li class="navbar__item ">
-          <a href="#" class="navbar__link">One</a>
-        </li>
-        <li class="navbar__item ">
-          <a href="#" class="navbar__link">Dropdown ▾</a>
-          <ul class="navbar__dropdown">
-            <li><a href="#">Themes</a></li>
-            <li><a href="#">Plugins</a></li>
-            <li><a href="#">Tutorials</a></li>
-          </ul>
-        </li>
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-      </ul>
-
-      <div class="cta">
-        <span class="vertical_line"></span>
-        <button class="btn btn__primary">PRIMARY</button>
-      </div>
-
+    <div class="cta">
+      <span class="vertical_line"></span>
+      <button class="btn btn__primary">PRIMARY</button>
     </div>
 
-  </nav>
+  </div>
+</nav>
 ```
 
 ## Component Alignment
@@ -116,6 +115,39 @@ Here, we have our nav-items aligned to the left side of the nav.
 </nav>
 ```
 
+### Nav with search form
+```html_example
+<nav class="navbar navbar--default">
+
+  <div class="navbar__header">
+    <a href="" class="navbar__brand">
+      <div class="logo--blue"></div>
+    </a>
+  </div>
+
+  <div class="navbar__nav">
+    <ul class="navbar__nav--left">
+      <form>
+        <div class="search-area">
+          <input type="text" placeholder="search..." class="seven-eiths search">
+          <button class="btn btn__primary btn__search"><span><svg class="icon-interface-search icon-search"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-search"></use></svg></span></button>
+        </div>
+      </form>
+    </ul>
+
+    <ul class="navbar__nav--right">
+      <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
+    </ul>
+
+    <div class="cta">
+      <span class="vertical_line"></span>
+      <button class="btn btn__primary">PRIMARY</button>
+    </div>
+
+  </div>
+</nav>
+```
+
 
 */
 
@@ -125,6 +157,7 @@ $blue: #3359df;
 $white: #ffffff;
 $black: #000000;
 $border: #dddddd;
+$nav-hover: #f8f8f8;
 
 body {
   margin: 0;
@@ -218,39 +251,49 @@ body {
       cursor: pointer;
 
       .navbar__dropdown {
-        background: $blue;
+        background: $white;
         display: none;
         position: absolute;
-        top: 85%;
+        top: 83%;
         padding: 0;
         margin-left: -1.1rem;
         list-style: none;
+        border-top: 5px solid $blue;
 
         li {
           float: none;
-          border-bottom: 1px solid $white;
           position: relative;
           text-align: center;
-          line-height: 2.8rem;
+          line-height: 2rem;
+          margin: .5rem 0;
 
           a {
             text-decoration: none;
-            color: $white;
+            color: #949494;
             padding: 0 2rem;
             display: block;
+            font-size: .9rem;
+
+            &:hover {
+              color: $blue;
+            }
           }
 
           &:hover {
-            background: blue;
+            background: $nav-hover;
+            color: #949494;
           }
         }
       }
 
       &:hover {
-        background: $blue;
+        background: $nav-hover;
+        border-bottom: 1px solid $border;
+
         .navbar__link {
-          color: $white;
+          color: $blue;
         }
+
         > ul {
           display: block;
         }

@@ -25,15 +25,24 @@
 
     <div class="navbar__nav">
       <ul class="navbar__nav--left">
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a>
-        <ul class="navbar__dropdown">
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">One</a>
+        </li>
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">One</a>
+          <ul class="navbar__dropdown">
             <li class="nav__dropdown__item"><a href="#">Themes</a></li>
             <li class="nav__dropdown__item"><a href="#">Plugins</a></li>
             <li class="nav__dropdown__item"><a href="#">Tutorials</a></li>
-          </ul></li>
+          </ul>
+        </li>
       </ul>
+      <form>
+        <div class="search-area">
+          <input type="text" placeholder="search..." class="seven-eiths search">
+          <button class="btn btn__primary btn__search"><span><svg class="icon-interface-search icon-search"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-search"></use></svg></span></button>
+        </div>
+      </form>
 
       <ul class="navbar__nav--right">
         <li class="navbar__item ">
@@ -58,6 +67,7 @@
     </div>
 
   </nav>
+
   <h1>Grids</h1>
    <div class="grid">
 
@@ -224,3 +234,51 @@
 	</div>
 
 	</div>
+
+
+<form class="grid grid--center">
+
+  <div class="grid__item three-quarters">
+    <div class="notice-error">
+      <p>You have chosen to activate premium mode, it will cost $7.00 per month</p>
+    </div>
+  </div>
+
+
+  <div class="field grid__item three-quarters">
+    <label for="username" class="form-text-error">Username&#42;</label><br>
+    <input type="text" class="one-whole form-error">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="password" class="form-text-error">Password&#42;</label><br>
+    <input type="password" class="one-whole form-error">
+  </div>
+  <br>
+
+  <div class="field grid__item three-quarters">
+    <label for="password" class="form-text-error">Password Confirm&#42;</label><br>
+    <input type="password" class="one-whole form-error">
+  </div>
+  <br>
+
+  <div class="cboxes grid__item three-quarters">
+    <div class="grid">
+      <div class="field grid__item three-quarters">
+        <input type="checkbox" name="premium" id="premium" class="switch" />
+        <label for="premium">Activate Premium mode</label>
+      </div>
+      <div class="field grid__item one-quarter">
+        <input type="checkbox">
+        <label>Accept</label>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="actions grid__item three-quarters">
+    <button class="btn btn__blue btn__primary one-whole"> I'm full width</button>
+  </div>
+
+</form>
