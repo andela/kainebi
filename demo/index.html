@@ -25,15 +25,24 @@
 
     <div class="navbar__nav">
       <ul class="navbar__nav--left">
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a></li>
-        <li class="navbar__item "><a href="#" class="navbar__link">One</a>
-        <ul class="navbar__dropdown">
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">One</a>
+        </li>
+        <li class="navbar__item ">
+          <a href="#" class="navbar__link">One</a>
+          <ul class="navbar__dropdown">
             <li class="nav__dropdown__item"><a href="#">Themes</a></li>
             <li class="nav__dropdown__item"><a href="#">Plugins</a></li>
             <li class="nav__dropdown__item"><a href="#">Tutorials</a></li>
-          </ul></li>
+          </ul>
+        </li>
       </ul>
+      <form>
+        <div class="search-area">
+          <input type="text" placeholder="search..." class="seven-eiths search">
+          <button class="btn btn__primary btn__search"><span><svg class="icon-interface-search icon-search"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-search"></use></svg></span></button>
+        </div>
+      </form>
 
       <ul class="navbar__nav--right">
         <li class="navbar__item ">
@@ -58,71 +67,6 @@
     </div>
 
   </nav>
-
-<h1>search</h1>
-<form class="grid grid--center">
-  <div class="search-area grid__item three-quarters">
-    <input type="text" placeholder="search..." class="seven-eiths">
-    <button class="btn btn__primary btn__search">Search</button>
-  </div>
-</form>
-
-<hr>
-
-<h1>Forms</h1>
-<form class="grid grid--center">
-  <div class="field grid__item three-quarters">
-    <label for="firstname">First Name</label><br>
-    <input type="text" class="one-whole">
-  </div>
-  <br>
-
-  <div class="field grid__item three-quarters">
-    <label for="lastname">Last Name</label><br>
-    <input type="text" class="one-whole">
-  </div>
-  <br>
-
-  <div class="field grid__item three-quarters">
-    <label for="email">Work Email</label><br>
-    <input type="text" class="one-whole">
-  </div>
-  <br>
-
-  <div class="field grid__item three-quarters">
-    <label for="company">Company Name</label><br>
-    <input type="text" class="one-whole">
-  </div>
-  <br>
-
-  <div class="field grid__item three-quarters">
-    <label for="website">Website</label><br>
-    <input type="text" class="one-whole">
-  </div>
-  <br>
-
-  <div class="field grid__item three-quarters">
-    <label for="country">Country</label><br>
-    <select class="one-whole">
-      <option class="blue" value disabled>-Please select-</option>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
-  </div>
-  <br>
-
-  <div class="field grid__item three-quarters">
-    <label for="needs">Technical Needs</label><br>
-    <textarea class="one-whole"></textarea>
-  </div>
-  <br>
-
-  <div class="actions grid__item three-quarters">
-    <button class="btn btn__primary one-whole"> I'm full width</button>
-  </div>
-</form>
 
   <h1>Grids</h1>
    <div class="grid">
