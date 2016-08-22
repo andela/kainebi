@@ -259,6 +259,7 @@ body {
         margin-left: -1.1rem;
         list-style: none;
         border-top: 5px solid $blue;
+        z-index: 1003;
 
         li {
           float: none;

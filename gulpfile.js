@@ -17,12 +17,14 @@ var browserSync      = require('browser-sync').create();
 var hologram         = require('gulp-hologram');
 var open             = require('gulp-open');
 var flatten          = require('gulp-flatten');
-var util = require('gulp-util');
-var svgSprite = require('gulp-svg-sprite');
-var svg2png = require('gulp-svg2png');
-var size = require('gulp-size');
-var debug = require('gulp-debug-streams');
-var plumber = require('gulp-plumber');
+var imagemin         = require('gulp-imagemin');
+var cache            = require('gulp-cache');
+var util             = require('gulp-util');
+var svgSprite        = require('gulp-svg-sprite');
+var svg2png          = require('gulp-svg2png');
+var size             = require('gulp-size');
+var debug            = require('gulp-debug-streams');
+var plumber          = require('gulp-plumber');
 
 var basePaths = {
   src: './src/',
@@ -35,7 +37,7 @@ var paths = {
       src: basePaths.src + 'icons/svg/**/*.svg',
       templateSrc: basePaths.src + 'icons/template/sprite-template.scss',
       svgDest: 'sprites/sprite.svg', // relative
-      pngDest: 'sprites/',  // relative 
+      pngDest: 'sprites/',  // relative
       cssDest: 'sprites/_sprite.scss',  // relative
       dest: basePaths.src + 'icons/'
     }
@@ -76,11 +78,21 @@ gulp.task('fonts', function () {
 });
 
 
+gulp.task('images', function(){
+  return gulp.src('./src/images/*.+(png|jpg|gif|svg)')
+  // Caching images that ran through imagemin
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
+  .pipe(gulp.dest('dist/images'))
+});
+
+
 gulp.task('icons', function () {
   return gulp.src("./src/icons/sprites/sprite.svg")
     .pipe(plumber())
     .pipe(flatten({ includeParents: 1 }))
-    .pipe(gulp.dest('./dist/css/icons'));
+    .pipe(gulp.dest('./dist/icons'));
 });
 
 
@@ -90,7 +102,7 @@ gulp.task('styleguide', function () {
 });
 
 gulp.task('styleguidePreview', function () {
-	var browser = os.platform() === 'linux' ? 'google-chrome' : (os.platform() === 'darwin' ? 'google chrome' : (os.platform() === 'win32' ? 'chrome' : 'firefox')); 
+	var browser = os.platform() === 'linux' ? 'google-chrome' : (os.platform() === 'darwin' ? 'google chrome' : (os.platform() === 'win32' ? 'chrome' : 'firefox'));
 	return gulp.src(__filename)
 		.pipe(open({uri: 'http://localhost:3000/styleguide'}));
 });
@@ -114,7 +126,7 @@ gulp.task('svgSprite', function () {
           render: {
             scss: {
               dest: paths.icons.sprite.cssDest,
-              template: paths.icons.sprite.templateSrc 
+              template: paths.icons.sprite.templateSrc
             }
           }
         }
@@ -152,7 +164,7 @@ gulp.task('lint', function () {
 gulp.task('serve', function () {
   browserSync.init({
     open: true,
-    server: { 
+    server: {
       baseDir: 'demo',
       routes: {
         '/dist': 'dist',
@@ -171,10 +183,12 @@ gulp.task('concat', function () {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('watch', ['serve', 'sass', 'icons', 'fonts'], function () {
+gulp.task('watch', ['serve', 'sass', 'icons', 'fonts', 'images'], function () {
   gulp.watch('./src/**/*.scss', ['sass']);
   // Watch svgs :)
   // gulp.watch(['./src/icons/*/*', '!./src/icons/_mixins.scss'], ['sprite']);
+  gulp.watch('./src/images/*.+(png|jpg|gif|svg)', ['images']);
+
   gulp.watch('./src/**/*.js', browserSync.reload);
   // Reload when markup for demo app changes
   gulp.watch('./demo/**/*.html', browserSync.reload);
@@ -187,7 +201,7 @@ gulp.task('clean:dist', function () {
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'concat', 'icons', 'fonts',],
+    ['sass', 'concat', 'icons', 'fonts', 'images'],
       callback
   );
 });
