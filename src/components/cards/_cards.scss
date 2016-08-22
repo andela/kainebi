@@ -1,0 +1,270 @@
+/*doc
+---
+title: Cards
+name: cards
+category: Components
+---
+
+Cards and different variations
+### With button
+
+```html_example
+<div class="grid__item one-half">
+  <div class="card">
+    <img class="card-img-top" src="dist/images/card-image.svg" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn__primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+```
+
+### Without button
+```html_example
+<div class="grid__item one-half">
+  <div class="card">
+    <img class="card-img-top" src="dist/images/card-image.svg" alt="Card image cap">
+    <div class="card-block">
+      <div class="grid">
+        <div class="grid__item two-thirds">
+          <h4 class="card-title">Card title</h4>
+        </div>
+        <div class="grid__item one-third">
+          <p class="date">10-07-2016</p>
+        </div>
+      </div>
+
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+```
+
+### Card image taking entire card height
+
+```html_example
+<div class="grid__item one-half">
+  <div class="card">
+    <img class="image-full" src="dist/images/card-image.svg" alt="Card image cap">
+  </div>
+</div>
+```
+
+### Card with avatar and like/comment count
+
+```html_example
+<div class="grid__item one-half">
+  <div class="card">
+    <div class="grid card-before-img">
+      <div class="grid__item two-thirds">
+        <div class="username">
+          <img src="dist/images/avatar.png" class="avatar" alt="">
+          Username
+        </div>
+      </div>
+      <div class="grid__item one-third">
+        <p class="date">10-07-2016</p>
+      </div>
+    </div>
+    <img class="card-img-top" src="dist/images/card-image.svg" alt="Card image cap">
+    <div class="card-block">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <div class="comments">
+            <p class="favs"><span><svg class="icon-interface-heart card-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="dist/icons/sprite.svg#icon-interface-heart"></use></svg></span>3 Likes</p>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <div class="likes">
+            <p class="favs">3 comments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="grid card-comment">
+      <input type="text" placeholder="Add Comment..." class="comment">
+    </div>
+  </div>
+</div>
+```
+
+### Without like and comment count
+```html_example
+<div class="grid__item one-half">
+  <div class="card">
+    <div class="grid card-before-img">
+      <div class="grid__item two-thirds">
+        <div class="username">
+          <img src="dist/images/avatar.png" class="avatar" alt="">
+          Username
+        </div>
+      </div>
+
+    </div>
+    <div class="card-block">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <hr>
+    <div class="grid card-comment">
+      <input type="text" placeholder="Add Comment..." class="comment">
+    </div>
+  </div>
+</div>
+```
+
+### Without avatar and comment section
+
+```html_example
+<div class="grid__item one-half">
+  <div class="card">
+    <div class="grid card-before-img">
+      <div class="grid__item two-thirds">
+        <div class="username">
+          Username
+        </div>
+      </div>
+      <div class="grid__item one-third">
+        <p class="date">10-07-2016</p>
+      </div>
+    </div>
+    <div class="card-block">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+````
+
+*/
+
+/* Your code here */
+
+a {
+  text-decoration: none;
+}
+
+.row {
+  margin-bottom: 3rem;
+}
+
+.card {
+  position: relative;
+  left: 0;
+  right: 0;
+  border: 1px solid #e3e3e3;
+  width: 90%;
+  cursor: pointer;
+
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(208,208,208,1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(208,208,208,1);
+  box-shadow: 0px 2px 2px 0px rgba(208,208,208,1);
+
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-full {
+    width: 100%;
+    min-height: 25rem;
+    margin-bottom: -.35rem;
+
+  }
+
+  .card-before-img {
+    padding: 1rem;
+
+    .username {
+      margin: 0;
+      color: #3359DF;
+
+      .avatar {
+        height: 2rem;
+        border-radius: 100%;
+        vertical-align: middle;
+        margin-right: .2rem;
+      }
+    }
+
+    .date {
+      margin: .3rem 0 0 0;
+      text-align: right;
+      color: #979797;
+      font-size: small;
+      vertical-align: middle;
+    }
+
+
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .card-comment {
+    text-align: center;
+
+    .comment {
+      border-color: transparent!important;
+      background: transparent;
+      margin: .5rem 0 .5rem 4rem;
+      box-shadow: none!important;
+    }
+
+  }
+
+
+  .card-block {
+    padding: 1.25rem;
+
+
+
+    .comments {
+      float: left;
+
+      .card-icon {
+        margin: -.3rem 0 0 0;
+        height: 15px;
+        vertical-align: middle;
+      }
+
+      .favs {
+        margin: 0;
+        font-size: small;
+      }
+    }
+
+    .likes {
+      float: right;
+
+      .favs {
+        margin: 0;
+        font-size: small;
+      }
+    }
+
+    .card-title {
+      margin: 0 0 1rem 0;
+    }
+
+    .card-text {
+      margin-top: 0;
+    }
+
+    .date {
+      margin: 0;
+      color: #3359DF;
+      font-size: small;
+      text-align: right;
+    }
+
+  }
+}
+
+
+

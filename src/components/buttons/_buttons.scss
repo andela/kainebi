@@ -26,8 +26,8 @@ use either a `<button>` or an `<a>` element:
 ```html_example
 
 <button class="btn btn__basic">Click</button>
-
 <a class="btn btn__basic" href="http://andela.com">Don't click</a>
+<div class="btn btn__basic" href=""> I'm a good ol' div </div>
 
 ```
 
@@ -58,27 +58,88 @@ a form or triggering some javascript event, then use a `<button>` element.
 <button class="btn btn__primary"> Primary </button>
 <button class="btn btn__secondary"> Secondary </button>
 
+<h3> Inverse </h3>
+
+<button class="btn btn__primary btn__primary--inverse"> Primary </button>
+<button class="btn btn__secondary btn__secondary--inverse"> Secondary </button>
+
 ```
 
-### Action Buttons
+### Action buttons
 
 ```html_example
 
-<button class="btn btn__basic btn--positive"> Positive </button>
-<button class="btn btn__basic btn--negative"> Negative </button>
+<h3> Solid </h3>
 
-<button class="btn btn__solid btn--positive"> Positive </button>
-<button class="btn btn__solid btn--negative"> Negative </button>
+<button class="btn btn__success"> Success </button>
+<button class="btn btn__danger"> Danger </button>
+<button class="btn btn__warning"> Warning </button>
+<button class="btn btn__info"> Info </button>
+
+
+<h3> Inverse </h3>
+
+<button class="btn btn__success--inverse"> Success </button>
+<button class="btn btn__danger--inverse"> Danger </button>
+<button class="btn btn__warning--inverse"> Warning </button>
+<button class="btn btn__info--inverse"> Info </button>
+
 
 ```
+
+### Brand Buttons
+
+```html_example
+
+<h3> Solid </h3>
+
+<button class="btn btn__solid--royal-blue"> Royal Blue </button>
+<button class="btn btn__solid--torea-bay"> Torea Bay </button>
+<button class="btn btn__solid--cornflower-blue"> Cornflower Blue </button>
+<button class="btn btn__solid--melrose"> Melrose </button>
+<button class="btn btn__solid--atlantis"> Atlantis </button>
+<br><br>
+<button class="btn btn__solid--amaranth"> Amaranth </button>
+<button class="btn btn__solid--bright-torquiose"> Bright Torquiose </button>
+<button class="btn btn__solid--purple-heart"> Purple Heart </button>
+<button class="btn btn__solid--caribbean-green"> Caribbean Green </button>
+<button class="btn btn__solid--tree-poppy"> Tree Poppy </button>
+
+<h3> Line </h3>
+
+<button class="btn btn__line--royal-blue"> Royal Blue </button>
+<button class="btn btn__line--torea-bay"> Torea Bay </button>
+<button class="btn btn__line--cornflower-blue"> Cornflower Blue </button>
+<button class="btn btn__line--melrose"> Melrose </button>
+<button class="btn btn__line--atlantis"> Atlantis </button>
+<br><br>
+<button class="btn btn__line--amaranth"> Amaranth </button>
+<button class="btn btn__line--bright-torquiose"> Bright Torquiose </button>
+<button class="btn btn__line--purple-heart"> Purple Heart </button>
+<button class="btn btn__line--caribbean-green"> Caribbean Green </button>
+<button class="btn btn__line--tree-poppy"> Tree Poppy </button>
+```
+
+
+
+<!-- <div class="btn-group">
+<button class="btn btn__line--purple-heart"> Purple Heart </button>
+<button class="btn btn__line--caribbean-green"> Caribbean Green </button>
+<button class="btn btn__line--tree-poppy"> Tree Poppy </button>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn__primary"> Primary 1 </button>
+  <button class="btn btn__primary"> Primary 2 </button>
+</div> -->
 
 ### Icon Buttons
 
 ```html_example
 
-<button class="btn btn__icon btn--heart-icon"></button>
-<button class="btn btn__icon btn--like-icon"></button>
-
+<button class="btn btn__icon purple-heart">
+<svg class="icon-interface-heart"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-heart"></use></svg>
+</button>
 ```
 
 ### Labeled Icon Buttons
@@ -86,11 +147,27 @@ a form or triggering some javascript event, then use a `<button>` element.
 
 ```html_example
 
-<button class="btn btn__labeled-icon btn--heart-icon"> I love this </button>
-<button class="btn btn__labeled-icon btn--like-icon"> I like this </button>
+<button class="btn btn__labeled-icon border--purple-heart purple-heart">
+<svg class="icon-interface-heart"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-heart"></use></svg>
+I love this </button>
+<button class="btn btn__labeled-icon bg-torea-bay white"> 
+  <svg class="icon-beverage-tea"><use xlink:href="dist/css/icons/sprite.svg#icon-beverage-tea"></use></svg>
+  I tea this 
+</button>
+<button class="btn btn__labeled-icon bg-melrose white"> 
+  Let's go there
+  <svg class="icon-interface-box-right"><use xlink:href="dist/css/icons/sprite.svg#icon-interface-box-right"></use></svg>
+</button>
+
 
 ````
 
+### Active/Inactive States 
+
+```html_example
+<button class="btn btn__line--tree-poppy"> Active Tree Poppy Button </button>
+<button class="btn btn__line--tree-poppy" disabled> Inactive Tree Poppy </button>
+```
 
 ### Button Sizes
 
@@ -122,17 +199,6 @@ size and style modifiers.
 
 */
 
-
-/* Your code here */
-
-$hover_color: #0940C9;
-$primary-color: #3359df;
-$base-border-radius: 4px;
-$base-border: 1px solid #E3E4E6;
-$base-font-size: 16px;
-$secondary-color: #6376f9;
-
-
 @function color($color) {
   @if(lightness($color) > 50) {
     @return #000;
@@ -145,72 +211,126 @@ button {
   background: none;
   border: none;
   outline: none;
-  transition: all .3s ease-in-out;
 }
 
 %button {
   cursor: pointer;
   border-radius: $base-border-radius;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
   padding: .5em .9em;
- }
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}
 
-@mixin btn($type, $color) {
+%icon-button {
+  [class^="icon-"], [class*=" icon-"] {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    transition: all 1s ease-in-out;
+  }
+}
+
+
+@mixin btn($type, $color: null) {
   @if($type == 'line') {
     background-color: #fff;
     color: $color;
-    border: 1px solid $color;
-    &:hover {
+    border: 1px solid;
+    &:hover,
+    &:active,
+    &:focus {
       background-color: $color;
       color: #fff;
     }
-  } @else {
+  } @else if ($type == 'solid') {
     background-color: $color;
     color: #fff;
-    border: 1px solid #fff;
-    &:hover {
+    border: 1px solid;
+    &:hover,
+    &:active,
+    &:focus {
       background-color: #fff;
       color: $color;
       border: 1px solid $color;
     }
+  } @else if ($type == 'icon') {
+    @extend %icon-button; 
+    padding: 0;
+    &:hover {
+    }
+  } @else if($type ==  'labeled-icon') {
+    @extend %icon-button;
+    border: 1px solid;
+    &:hover {
+    }
   }
 }
-
 
 .btn {
   @extend %button;
 
   &__basic {
-    @include btn('line', #797979);
+    @include btn('line', $royal-blue);   
   }
 
   &__primary {
-    @include btn('solid', $primary-color);
+    @include btn('solid', $royal-blue);
   }
 
   &__secondary {
-    @include btn('solid', $secondary-color);
+    @include btn('line', $melrose);
   }
 
-  &--positive {
-    @include btn('line', darken(#09dbaa, 8%));
-  }
-
-  &--negative {
-    @include btn('line', #f0405e);
-  }
-
-  &__solid {
-    @include btn('solid', transparent);
-  }
-
-  //TODO:
+  //TODO: 
 
   &__icon {
-
+    @include btn('icon', transparent);
   }
 
   &__labeled-icon {
+    @include btn('labeled-icon', transparent);
+  }
+ 
+  &__success {
+    @include btn('solid', $caribbean-green);   
+  }
 
+  &__danger {
+    @include btn('solid', $amaranth);
+  }
+  &__info {
+    @include btn('solid', mix(white, $royal-blue, $color-interval * 3));
+  }
+
+  &__success--inverse {
+    @include btn('line', $caribbean-green);
+  }
+
+  &__danger--inverse {
+    @include btn('line', $amaranth);
+  }
+
+  &__warning--inverse {
+    @include btn('line', mix(black, $tree-poppy, $color-interval));
+  }
+
+  &__info--inverse {
+    @include btn('line', mix(white, $royal-blue, $color-interval * 3));
+  }
+
+  &__primary--inverse {
+    @include btn('line', $royal-blue);
+  }
+
+  &__secondary--inverse {
+    @include btn('solid', $melrose);
   }
 
   &--small {
@@ -232,4 +352,32 @@ button {
   &--full-width {
     min-width: 100%;
   }
+@each $color-name, $color-variants in $brand-colors {
+  &__line--#{$color-name} {
+    @include btn('line', map-get($color-variants, 'base'));
+  }
+  &__solid--#{$color-name} {
+    @include btn('solid', map-get($color-variants, 'base'));
+  }
 }
+}
+
+.btn-group {
+  border: 1px solid;
+  display: inline-block;
+  border-radius: $base-border-radius;
+  .btn,
+  .btn__primary,
+  .btn-secondary,
+  .btn-basic {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+      border: none;
+    }
+  }
+}
+
