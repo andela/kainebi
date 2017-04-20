@@ -164,6 +164,7 @@ gulp.task('lint', function () {
 gulp.task('serve', function () {
   browserSync.init({
     open: true,
+    port: '4000',
     server: {
       baseDir: 'demo',
       routes: {
